@@ -2,4 +2,7 @@
 
 静态网页版本。数据来源、行情最新交易日和生成时间已写入页面正文。
 
-入口文件：`index.html`
+入口文件：
+
+- `index.html`：A股市场全面认知报告
+- `lynch-methodology.html`：彼得林奇投研方法论 v3

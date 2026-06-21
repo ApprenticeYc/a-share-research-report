@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>可复用的投研方法论：提炼自《彼得·林奇的成功投资》</title>
+  <style>
+:root{--bg:#f5f2eb;--paper:#fffdf8;--ink:#20201d;--muted:#6e6a61;--line:#ddd5c7;--green:#246d5a;--green2:#dfeee8;--gold:#b98636;--gold2:#f4ead7;--red:#a84b3f;--shadow:0 20px 60px rgba(40,33,22,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:radial-gradient(circle at 8% 0%,rgba(36,109,90,.12),transparent 26rem),radial-gradient(circle at 100% 5%,rgba(185,134,54,.16),transparent 24rem),var(--bg);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.78}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:36px;max-width:1440px;margin:0 auto;padding:28px}.sidebar{position:sticky;top:22px;height:calc(100vh - 44px);overflow:auto;padding:20px 18px;border:1px solid rgba(221,213,199,.85);border-radius:18px;background:rgba(255,253,248,.82);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(36,28,16,.07)}.brand{padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:14px}.brand strong{display:block;font-size:18px;line-height:1.35}.brand span{display:block;margin-top:6px;color:var(--muted);font-size:12px}
+.toc details{border-bottom:1px solid rgba(221,213,199,.75);padding:8px 0}.toc summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-items:flex-start}.toc summary::-webkit-details-marker{display:none}.toc summary::before{content:"›";color:var(--green);font-weight:900;transform:translateY(1px);transition:transform .18s ease}.toc details[open] summary::before{transform:rotate(90deg) translateX(2px)}.toc a{color:var(--ink);text-decoration:none;font-size:13px;line-height:1.45}.toc summary a{font-weight:800}.toc-children{display:grid;gap:6px;padding:8px 0 0 18px}.toc-children a{color:var(--muted);font-size:12px;overflow-wrap:anywhere}.toc a.active{color:var(--green);font-weight:900}
+.content{min-width:0}.hero{position:relative;overflow:hidden;padding:34px 42px 32px;border:1px solid rgba(221,213,199,.9);border-radius:24px;background:linear-gradient(135deg,rgba(255,253,248,.96),rgba(246,241,230,.94));box-shadow:var(--shadow);margin-bottom:26px}.eyebrow{display:inline-flex;padding:6px 12px;border-radius:999px;background:var(--green2);color:var(--green);font-weight:850;font-size:13px}h1{margin:16px 0 12px;font-size:clamp(30px,3.2vw,44px);line-height:1.13;letter-spacing:0}h1 span,h1 small{display:block}h1 small{margin-top:6px;font-size:clamp(20px,2.2vw,30px);line-height:1.18;font-weight:850}.hero p{max-width:880px;margin:0;color:var(--muted);font-size:16px}
+article{padding:42px 48px;border:1px solid rgba(221,213,199,.9);border-radius:24px;background:rgba(255,253,248,.95);box-shadow:var(--shadow)}h2{margin:54px 0 18px;padding-top:8px;font-size:27px;line-height:1.25;letter-spacing:0}h2:first-child{margin-top:0}h3{margin:36px 0 12px;font-size:22px;line-height:1.32}h4{margin:28px 0 10px;font-size:18px;line-height:1.4;color:var(--green)}p{margin:13px 0;font-size:16px}blockquote{margin:22px 0;padding:18px 22px;border-left:5px solid var(--green);background:#edf5f1;border-radius:14px;color:#2d453d;font-weight:650}strong{font-weight:850}code{font-family:"SFMono-Regular",Consolas,monospace;background:#f1eadc;border:1px solid #e3dac9;padding:1px 5px;border-radius:6px}pre{overflow:auto;padding:18px;border-radius:16px;background:#17211d;color:#eef7f2}pre code{background:transparent;border:0;color:inherit;padding:0}ol,ul{padding-left:1.35em}li{margin:5px 0}.table-wrap{overflow-x:auto;margin:18px 0 28px;border:1px solid var(--line);border-radius:16px;background:#fff}table{width:100%;border-collapse:collapse;min-width:760px;font-size:14px}th,td{padding:12px 14px;border-bottom:1px solid #eee6d8;vertical-align:top;text-align:left}th{background:#efe8dc;color:#2c2924;font-weight:850}tr:last-child td{border-bottom:0}
+.visual{margin:20px 0 34px;padding:22px;border:1px solid rgba(221,213,199,.95);border-radius:22px;background:linear-gradient(180deg,#fffaf0,#fffdf8);box-shadow:0 12px 36px rgba(52,41,24,.08)}.visual figcaption{margin-bottom:16px;color:var(--green);font-size:14px;font-weight:850}.flow-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.flow-rail div{padding:15px 14px;border:1px solid #c9dfd5;border-radius:16px;background:#f6fbf8;min-height:116px}.flow-rail span{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;border-radius:50%;background:var(--green);color:#fff;font-size:12px;font-weight:900}.flow-rail b{display:block;margin-top:10px;font-size:16px}.flow-rail em{display:block;margin-top:5px;color:var(--muted);font-size:13px;font-style:normal;line-height:1.45}.layer-grid{display:grid;grid-template-columns:1fr 1.7fr 1.7fr;gap:12px;margin-top:14px}.layer-grid div,.chain div,.type-cards div,.funnel div,.dash div,.tree-node,.decision-map div{border-radius:16px;border:1px solid var(--line);background:#fffdf8}.layer-grid div{padding:14px}.layer-grid b,.layer-grid span{display:block}.layer-grid span{color:var(--muted);font-size:13px;margin-top:4px}.flywheel{position:relative;height:540px;max-width:900px;margin:0 auto;border-radius:28px;background:radial-gradient(circle at center,rgba(36,109,90,.14),transparent 160px),linear-gradient(135deg,#fbf5e8,#f9fcf9);overflow:hidden}.flywheel:before{content:"";position:absolute;inset:70px 130px;border:2px solid rgba(36,109,90,.28);border-radius:50%;box-shadow:inset 0 0 0 18px rgba(36,109,90,.04)}.flywheel:after{content:"↻";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:280px;line-height:1;color:rgba(36,109,90,.09);font-family:Georgia,serif}.fly-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:210px;height:210px;border-radius:50%;display:grid;place-content:center;text-align:center;background:#18392f;color:#fff;box-shadow:0 20px 45px rgba(24,57,47,.22)}.fly-center b,.fly-center span{display:block}.fly-center b{font-size:20px;line-height:1.35}.fly-center span{font-size:13px;opacity:.78;margin-top:6px}.fly-step{position:absolute;z-index:3;width:150px;min-height:88px;padding:12px 14px;border-radius:18px;border:1px solid #bdd7cb;background:rgba(255,253,248,.96);box-shadow:0 12px 26px rgba(48,38,24,.10)}.fly-step span{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;border-radius:999px;background:var(--gold);color:#fff;font-size:12px;font-weight:900}.fly-step b{display:block;margin-top:7px;color:var(--green);font-size:16px}.fly-step em{display:block;color:var(--muted);font-size:12px;font-style:normal}.fly-step.s1{left:50%;top:18px;transform:translateX(-50%)}.fly-step.s2{right:110px;top:98px}.fly-step.s3{right:72px;top:245px}.fly-step.s4{right:155px;bottom:62px}.fly-step.s5{left:50%;bottom:18px;transform:translateX(-50%)}.fly-step.s6{left:118px;bottom:92px}.fly-step.s7{left:72px;top:170px}.chain{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.chain div{padding:16px;min-height:135px}.chain b,.chain span{display:block}.chain b{color:var(--green);font-size:16px}.chain span{margin-top:8px;color:var(--muted);font-size:12px;line-height:1.45}.type-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.type-cards div{padding:16px}.type-cards span{color:var(--muted);font-size:13px}.type-cards b{display:block;margin:7px 0;font-size:20px;color:var(--green)}.type-cards em{color:#3f3a32;font-style:normal}.decision-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.decision-map div{padding:16px;min-height:118px}.decision-map .decision-start{grid-column:span 3;min-height:auto;text-align:center;background:#18392f;color:#fff;font-size:22px;font-weight:900}.decision-map b,.decision-map span,.decision-map em{display:block}.decision-map b{color:var(--green);font-size:17px}.decision-map span{margin-top:8px;font-size:20px;font-weight:900}.decision-map em{margin-top:6px;color:var(--muted);font-size:13px;font-style:normal}.funnel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.funnel div{padding:18px}.funnel strong,.funnel span{display:block}.funnel strong{color:var(--green);font-size:18px}.funnel span{color:var(--muted);margin-top:8px;font-size:14px}.dash{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.dash div{padding:16px}.dash b{display:block;color:var(--green);margin-bottom:10px}.dash span{display:inline-flex;margin:4px 4px 0 0;padding:4px 8px;border-radius:999px;background:var(--green2);color:#31584d;font-size:12px}.tree-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.tree-node{padding:16px;font-weight:850;min-height:76px;display:flex;align-items:center;justify-content:center;text-align:center}.tree-node.root{grid-column:span 4;background:#e6f1ec;color:var(--green)}.tree-node.good{background:#e7f4e8;color:#28603a}.tree-node.warn{background:var(--gold2);color:#7b551d}.tree-node.bad{background:#f5e5e1;color:var(--red)}
+.backtop{position:fixed;right:24px;bottom:22px;width:54px;height:54px;border-radius:50%;background:#171714;color:#fff;display:grid;place-items:center;text-decoration:none;font-weight:850;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+@media(max-width:1100px){.layout{grid-template-columns:1fr;padding:18px}.sidebar{position:relative;top:0;height:auto;max-height:420px}article,.hero{padding:30px 24px}.flow-rail{grid-template-columns:repeat(2,minmax(0,1fr))}.chain,.dash{grid-template-columns:repeat(2,minmax(0,1fr))}.layer-grid,.funnel,.type-cards,.decision-map{grid-template-columns:1fr}.decision-map .decision-start{grid-column:span 1}.flywheel{height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:16px}.flywheel:before,.flywheel:after{display:none}.fly-center,.fly-step,.fly-step.s1,.fly-step.s2,.fly-step.s3,.fly-step.s4,.fly-step.s5,.fly-step.s6,.fly-step.s7{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;width:auto;height:auto}.fly-center{border-radius:18px;min-height:120px}.fly-step{min-height:120px}}
+@media(max-width:640px){.layout{padding:12px}h1{font-size:28px;line-height:1.16}h1 small{font-size:22px}h2{font-size:23px}h3{font-size:19px}article,.hero{border-radius:18px;padding:24px 18px}.flow-rail,.chain,.dash,.tree-grid,.flywheel{grid-template-columns:1fr}.tree-node.root{grid-column:span 1}table{min-width:700px}}
+</style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <strong>林奇投研手册 v3</strong>
+        <span>个股研究 · 分类验证 · 持续追踪</span>
+      </div>
+      <nav class="toc" aria-label="目录"><details open><summary><a href="#0.-总览-从发现线索到卖出换仓">0. 总览：从发现线索到卖出换仓</a></summary>
+<div class="toc-children">
+<a href="#0.1-八条核心原则">0.1 八条核心原则</a>
+<a href="#0.2-七步闭环">0.2 七步闭环</a>
+</div>
+</details>
+<details open><summary><a href="#1.-投资前提-什么人适合主动投资">1. 投资前提：什么人适合主动投资</a></summary>
+<div class="toc-children">
+<a href="#1.1-主动投资前的五条边界">1.1 主动投资前的五条边界</a>
+<a href="#1.2-业余投资者的优势不是-更聪明">1.2 业余投资者的优势不是“更聪明”</a>
+<a href="#1.3-不适合主动投资的情况">1.3 不适合主动投资的情况</a>
+<a href="#1.4-适合主动投资的情况">1.4 适合主动投资的情况</a>
+</div>
+</details>
+<details open><summary><a href="#2.-发现线索-识别可验证的公司变化">2. 发现线索：识别可验证的公司变化</a></summary>
+<div class="toc-children">
+<a href="#2.1-四类线索来源">2.1 四类线索来源</a>
+<a href="#2.2-形式过时-本质不过时">2.2 形式过时，本质不过时</a>
+<a href="#2.3-产品好-公司好-股票好-是三件不同的事">2.3 产品好、公司好、股票好，是三件不同的事</a>
+<a href="#2.4-关键案例-la-quinta-与-bildner-s">2.4 关键案例：La Quinta 与 Bildner&#x27;s</a>
+</div>
+</details>
+<details open><summary><a href="#3.-公司定性-六类公司决定六种研究问题">3. 公司定性：六类公司决定六种研究问题</a></summary>
+<div class="toc-children">
+<a href="#3.1-分类第一问-股东收益主要来自哪里">3.1 分类第一问：股东收益主要来自哪里？</a>
+<a href="#3.2-六类公司深度对比">3.2 六类公司深度对比</a>
+<a href="#3.3-六类公司逐项手册">3.3 六类公司逐项手册</a>
+<a href="#3.4-类型迁移">3.4 类型迁移</a>
+</div>
+</details>
+<details><summary><a href="#4.-质量验证-13条正面线索与6类排除对象">4. 质量验证：13条正面线索与6类排除对象</a></summary>
+<div class="toc-children">
+<a href="#4.1-13条正面线索">4.1 13条正面线索</a>
+<a href="#4.2-6类排除对象">4.2 6类排除对象</a>
+</div>
+</details>
+<details><summary><a href="#5.-估值与财务-价格-增长-现金-负债">5. 估值与财务：价格、增长、现金、负债</a></summary>
+<div class="toc-children">
+<a href="#5.1-pe与增长率">5.1 PE与增长率</a>
+<a href="#5.2-估值速算表">5.2 估值速算表</a>
+<a href="#5.3-现金与负债">5.3 现金与负债</a>
+<a href="#5.4-12项财务指标速查">5.4 12项财务指标速查</a>
+<a href="#5.5-增长率来自哪里">5.5 增长率来自哪里</a>
+</div>
+</details>
+<details><summary><a href="#6.-信息核查-用资料验证公司逻辑">6. 信息核查：用资料验证公司逻辑</a></summary>
+<div class="toc-children">
+<a href="#6.1-核查对象">6.1 核查对象</a>
+<a href="#6.2-不要问股价-问事实">6.2 不要问股价，问事实</a>
+<a href="#6.3-年报阅读顺序">6.3 年报阅读顺序</a>
+</div>
+</details>
+<details><summary><a href="#7.-买入-两分钟投资故事">7. 买入：两分钟投资故事</a></summary>
+<div class="toc-children">
+<a href="#7.1-通用八问">7.1 通用八问</a>
+<a href="#7.2-按类型写故事">7.2 按类型写故事</a>
+</div>
+</details>
+<details><summary><a href="#8.-买后持续追踪-按公司类型建立观察指标">8. 买后持续追踪：按公司类型建立观察指标</a></summary>
+<div class="toc-children">
+<a href="#8.1-类型化追踪仪表盘">8.1 类型化追踪仪表盘</a>
+<a href="#8.2-监控失败案例-得克萨斯航空">8.2 监控失败案例：得克萨斯航空</a>
+</div>
+</details>
+<details><summary><a href="#9.-卖出-换仓-故事破裂-估值过高-机会更好">9. 卖出/换仓：故事破裂、估值过高、机会更好</a></summary>
+<div class="toc-children">
+<a href="#9.1-卖出总顺序">9.1 卖出总顺序</a>
+<a href="#9.2-按类型卖出表">9.2 按类型卖出表</a>
+<a href="#9.3-卖出前的最后七问">9.3 卖出前的最后七问</a>
+</div>
+</details>
+<details><summary><a href="#10.-组合管理与心理护盾">10. 组合管理与心理护盾</a></summary>
+<div class="toc-children">
+<a href="#10.1-收益目标和持股数量">10.1 收益目标和持股数量</a>
+<a href="#10.2-类型配置">10.2 类型配置</a>
+<a href="#10.3-12种危险说法">10.3 12种危险说法</a>
+<a href="#10.4-远离复杂工具">10.4 远离复杂工具</a>
+</div>
+</details>
+<details><summary><a href="#11.-三个高频问题">11. 三个高频问题</a></summary>
+<div class="toc-children">
+<a href="#11.1-什么时候卖">11.1 什么时候卖？</a>
+<a href="#11.2-要不要做宏观分析">11.2 要不要做宏观分析？</a>
+<a href="#11.3-困境反转型怎么提高确定性-持续下跌时先等待吗">11.3 困境反转型怎么提高确定性？持续下跌时先等待吗？</a>
+</div>
+</details>
+<details><summary><a href="#12.-最终可执行模板">12. 最终可执行模板</a></summary>
+<div class="toc-children">
+<a href="#12.1-买入前清单">12.1 买入前清单</a>
+<a href="#12.2-持有中清单">12.2 持有中清单</a>
+<a href="#12.3-卖出前清单">12.3 卖出前清单</a>
+<a href="#12.4-四个月上手计划">12.4 四个月上手计划</a>
+</div>
+</details>
+<details><summary><a href="#13.-全书最重要的14个见解">13. 全书最重要的14个见解</a></summary>
+</details>
+<details><summary><a href="#14.-来源追溯索引">14. 来源追溯索引</a></summary>
+</details>
+<details><summary><a href="#15.-最终一句话">15. 最终一句话</a></summary>
+</details></nav>
+    </aside>
+    <main class="content">
+      <section class="hero" id="top">
+        <span class="eyebrow">彼得·林奇投资体系</span>
+        <h1><span>可复用的投研方法论</span><small>提炼自《彼得·林奇的成功投资》</small></h1>
+        <p>从投资边界、线索发现、公司分类、质量筛选，到估值核查、买入故事、持续追踪和卖出换仓。</p>
+      </section>
+      <article><blockquote><p>一套用于个股研究的操作框架：先确定投资边界，再发现可验证的公司变化，随后分类、筛选、估值、核查、买入、追踪、卖出。</p></blockquote>
+<p>核心主线：</p>
+<p><strong>投资边界 → 发现线索 → 判断公司类型 → 验证质量与估值 → 讲清公司逻辑 → 买后持续追踪 → 卖出或换仓。</strong></p>
+<p>这套方法可以分成三层。第一层是投资边界，解决钱、能力圈和市场噪音；第二层是投研决策，解决线索、分类、筛选、估值和买入；第三层是持有复盘，解决买入后的验证、迁移、卖出和换仓。</p>
+<div class="table-wrap"><table><thead><tr><th>层级</th><th>作用</th><th>对应动作</th></tr></thead><tbody><tr><td>投资边界</td><td>决定哪些钱能投、哪些公司能看、哪些噪音要过滤</td><td>只用长期闲钱；只研究能力圈；不把短期市场预测当买卖理由</td></tr><tr><td>投研决策</td><td>决定一家公司是否值得买</td><td>发现线索、公司分类、质量筛选、财务估值、信息核查、买入故事</td></tr><tr><td>持有复盘</td><td>决定收益能否兑现</td><td>定期复查、识别类型迁移、判断故事增强或破裂、卖出或换仓</td></tr></tbody></table></div>
+<p>读完后要形成的不是几个概念，而是一套动作：<strong>每分析一家公司，都能知道下一步该查什么、什么时候停止、什么时候等待、什么时候卖出。</strong></p>
+<h2 id="0.-总览-从发现线索到卖出换仓">0. 总览：从发现线索到卖出换仓</h2>
+
+<figure class="visual system-map">
+  <figcaption>总图：从线索到卖出的完整投研闭环</figcaption>
+  <div class="flow-rail">
+    <div><span>01</span><b>投资边界</b><em>长期闲钱、能力圈、市场噪音</em></div>
+    <div><span>02</span><b>发现线索</b><em>从现实变化找到候选公司</em></div>
+    <div><span>03</span><b>公司定性</b><em>六类公司决定问题</em></div>
+    <div><span>04</span><b>质量验证</b><em>13条正面线索与6类排除对象</em></div>
+    <div><span>05</span><b>估值财务</b><em>价格、增长、现金、负债</em></div>
+    <div><span>06</span><b>看懂公司</b><em>两三分钟讲清逻辑</em></div>
+    <div><span>07</span><b>持续追踪</b><em>故事差分与类型迁移</em></div>
+    <div><span>08</span><b>卖出换仓</b><em>故事破裂或机会更好</em></div>
+  </div>
+  <div class="layer-grid">
+    <div><b>投资边界</b><span>决定哪些钱能投、哪些公司能看</span></div>
+    <div><b>投研决策</b><span>决定买入质量：发现、分类、筛选、估值、核查、故事</span></div>
+    <div><b>持有复盘</b><span>决定收益兑现：复查、迁移、卖出、换仓</span></div>
+  </div>
+</figure>
+
+<p>林奇的方法不是单点选股技巧，而是一条完整的投研链条：</p>
+<p><strong>从真实世界发现线索，用公司类型提出正确问题，用正反筛选排除噪音，用财务和估值约束故事，用两分钟投资故事检验自己是否真正看懂公司，用持续追踪决定持有、加仓、减仓、卖出。</strong></p>
+<h3 id="0.1-八条核心原则">0.1 八条核心原则</h3>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>原则</th><th>实操含义</th></tr></thead><tbody><tr><td>1</td><td>只买自己能理解的公司</td><td>讲不清业务、利润来源、关键变量，就不进入研究</td></tr><tr><td>2</td><td>身边观察是线索，不是买入理由</td><td>看到排队、复购、订单改善后，还要验证重要性和估值</td></tr><tr><td>3</td><td>买入前先分类</td><td>六类公司对应六套问题，分类错后面全错</td></tr><tr><td>4</td><td>价格必须与收益、增长、资产匹配</td><td>好公司买贵了也会变成坏股票</td></tr><tr><td>5</td><td>最好的机会常在冷门、枯燥、被忽视的公司里</td><td>超额收益来自市场还没充分定价</td></tr><tr><td>6</td><td>最大风险常在热门、昂贵、故事动听但缺利润的公司里</td><td>故事不能替代收益、现金和负债</td></tr><tr><td>7</td><td>长期投资不是不动，而是持续验证基本面</td><td>持有是复查循环，不是买完忘记</td></tr><tr><td>8</td><td>卖出理由来自买入理由失效，不来自股价本身</td><td>买入写故事，卖出查故事</td></tr></tbody></table></div>
+<h3 id="0.2-七步闭环">0.2 七步闭环</h3>
+
+<figure class="visual flywheel-visual">
+  <figcaption>图1：七步闭环飞轮</figcaption>
+  <div class="flywheel">
+    <div class="fly-center"><b>复利来自反复验证</b><span>不是一次性押注</span></div>
+    <div class="fly-step s1"><span>01</span><b>发现线索</b><em>具体变化</em></div>
+    <div class="fly-step s2"><span>02</span><b>公司分类</b><em>先定题型</em></div>
+    <div class="fly-step s3"><span>03</span><b>质量筛选</b><em>进入/观察/排除</em></div>
+    <div class="fly-step s4"><span>04</span><b>估值财务</b><em>价格约束</em></div>
+    <div class="fly-step s5"><span>05</span><b>讲清逻辑</b><em>两三分钟</em></div>
+    <div class="fly-step s6"><span>06</span><b>持续追踪</b><em>故事差分</em></div>
+    <div class="fly-step s7"><span>07</span><b>卖出换仓</b><em>资金回流</em></div>
+  </div>
+</figure>
+
+<div class="table-wrap"><table><thead><tr><th>步骤</th><th>核心问题</th><th>结果</th></tr></thead><tbody><tr><td>1. 发现</td><td>我看到了什么可验证的公司变化？</td><td>候选公司</td></tr><tr><td>2. 分类</td><td>它属于六类中的哪一类？</td><td>研究题型</td></tr><tr><td>3. 筛选</td><td>它符合正面线索吗？踩中排除对象吗？</td><td>进入深研 / 观察 / 排除</td></tr><tr><td>4. 估值</td><td>当前价格要求公司未来做到什么？</td><td>估值压力测试</td></tr><tr><td>5. 决策</td><td>两三分钟能否讲清公司如何赚钱、为什么现在值得买、什么情况会卖？</td><td>买入 / 不买</td></tr><tr><td>6. 持有</td><td>故事变强、变弱，还是类型迁移？</td><td>持有 / 加仓 / 减仓</td></tr><tr><td>7. 卖出</td><td>故事破裂、估值透支，还是有更好机会？</td><td>卖出 / 换仓</td></tr></tbody></table></div>
+<p>这个闭环的价值不是让你一次性做完所有动作，而是让每次研究都能回到同一套问题：发现是否真实，分类是否正确，数字是否支持，买入理由是否还能成立。</p>
+<p>这个闭环最重要的四个箭头：</p>
+<ol><li><strong>决策不通过 → 回到发现。</strong> 大多数公司被淘汰不是失败，而是纪律。</li><li><strong>持有 → 持有。</strong> 好公司不是每天交易，而是持续验证。</li><li><strong>卖出 → 重新发现。</strong> 卖出不是结束，是资本重新寻找更好故事。</li><li><strong>心理护盾保护全流程。</strong> 12种危险说法、期权期货卖空、宏观恐慌，都会把你从企业研究拉回价格赌博。</li></ol>
+<h2 id="1.-投资前提-什么人适合主动投资">1. 投资前提：什么人适合主动投资</h2>
+<p>对应原书主题：第1-5章，尤其是“进入股市前的自我测试”和“不要预测股市”。</p>
+<p>这一章不需要反复深挖，但不能省略。它解决的不是“买哪家公司”，而是“你有没有资格主动选股”。</p>
+<h3 id="1.1-主动投资前的五条边界">1.1 主动投资前的五条边界</h3>
+<div class="table-wrap"><table><thead><tr><th>前提</th><th>林奇的意思</th><th>实操翻译</th></tr></thead><tbody><tr><td>长期闲钱</td><td>股票波动不可避免，短钱会被迫在错误时间卖出</td><td>生活资金、买房资金、短期负债资金不能用于主动选股</td></tr><tr><td>能力圈</td><td>不买自己讲不清楚的公司</td><td>能解释业务、利润来源、关键变量，才进入研究</td></tr><tr><td>不预测短期市场</td><td>没人能稳定预测大盘、利率、经济衰退</td><td>宏观只能翻译成公司变量，不能作为清仓/满仓按钮</td></tr><tr><td>独立判断</td><td>机构和专家也会错，热门观点常滞后</td><td>所有推荐都拆成可验证假设</td></tr><tr><td>情绪防线</td><td>股价涨跌会覆盖事实判断</td><td>买入前写下理由，卖出时只检查理由是否失效</td></tr></tbody></table></div>
+<h3 id="1.2-业余投资者的优势不是-更聪明">1.2 业余投资者的优势不是“更聪明”</h3>
+<p>林奇说业余投资者可能战胜机构，不是因为业余投资者天然聪明，而是因为结构不同。</p>
+<div class="table-wrap"><table><thead><tr><th>对比维度</th><th>业余投资者</th><th>专业投资者</th></tr></thead><tbody><tr><td>信息来源</td><td>工作、消费、生活观察，可能领先6-12个月</td><td>分析师报告、会议、共识信息，常常滞后</td></tr><tr><td>投资限制</td><td>可以不买，可以只买懂的公司</td><td>常被名单、规模、风控、职业风险限制</td></tr><tr><td>资金规模</td><td>小资金灵活，能买冷门小公司</td><td>基金太大，小公司对业绩贡献有限</td></tr><tr><td>职业压力</td><td>只对自己负责</td><td>买冷门错了会被质疑，买共识错了较安全</td></tr><tr><td>时间自由</td><td>可以等待几年</td><td>常受季度排名和赎回压力影响</td></tr></tbody></table></div>
+<p>这不是鼓励盲目自信，而是提醒：<strong>你的优势只存在于“你先看到真实经营变化，并且比市场更早完成验证”的时候。</strong></p>
+<h3 id="1.3-不适合主动投资的情况">1.3 不适合主动投资的情况</h3>
+<ol><li>资金两三年内必须使用。</li><li>无法承受股价下跌，跌了就想止损。</li><li>不愿意读财报、公告、电话会、行业资料。</li><li>喜欢听代码和结论，不愿意写自己的买入理由。</li><li>讲不清公司靠什么赚钱，却愿意重仓。</li><li>容易把宏观新闻、股价走势、别人观点当作买卖理由。</li></ol>
+<h3 id="1.4-适合主动投资的情况">1.4 适合主动投资的情况</h3>
+<ol><li>有长期闲钱。</li><li>有生活、行业或专业场景能持续观察。</li><li>愿意把线索转化成事实验证。</li><li>能接受大量时间只是等待和复查。</li><li>能承认错误，故事破裂时卖出。</li></ol>
+<h2 id="2.-发现线索-识别可验证的公司变化">2. 发现线索：识别可验证的公司变化</h2>
+
+<figure class="visual chain-map">
+  <figcaption>图2：从生活现象到投资判断</figcaption>
+  <div class="chain">
+    <div><b>看到现象</b><span>门店排队 / 订单改善 / 地方资产被忽略</span></div>
+    <div><b>翻译判断</b><span>它会怎样改善收入、利润、现金流或资产价值？</span></div>
+    <div><b>判断重要性</b><span>占收入利润多少？能否复制？市场是否已定价？</span></div>
+    <div><b>进入分类</b><span>快速增长、周期、反转、资产，题型不同问题不同</span></div>
+    <div><b>事实验证</b><span>财务、渠道、行业、管理层、估值交叉核查</span></div>
+  </div>
+</figure>
+
+<p>对应原书主题：第6章“寻找10倍股”，以及导论中“业余投资者的优势”。</p>
+<p>“从生活中找机会”不是看到排队就买，也不是产品好就买。正确说法是：</p>
+<p><strong>你看到了什么具体变化？如果这个变化成立，它会怎样改善公司的收入、利润、现金流或资产价值？</strong></p>
+<p>现实观察只是入口，必须翻译成可验证的经营判断。</p>
+<h3 id="2.1-四类线索来源">2.1 四类线索来源</h3>
+<div class="table-wrap"><table><thead><tr><th>线索来源</th><th>观察到的变化</th><th>需要验证的问题</th><th>第一轮核查</th></tr></thead><tbody><tr><td>日常消费</td><td>门店排队、复购强、体验好、家人朋友反馈好</td><td>这是单点现象，还是可复制需求？</td><td>产品/门店收入占比、同店销售、毛利率、开店速度</td></tr><tr><td>工作行业</td><td>订单增加、库存下降、价格上涨、客户转向某供应商</td><td>这是短期波动，还是公司竞争位置改善？</td><td>订单、价格、库存、产能、客户集中度、成本位置</td></tr><tr><td>地方资产</td><td>本地地产、区域银行、地方品牌、牌照资源被低估</td><td>市场是否没看见资产价值？价值能否释放？</td><td>资产可变现价值、债务扣除、催化剂、管理层行为</td></tr><tr><td>专业接触</td><td>医院药品、供应链、渠道、工厂、客户选择变化</td><td>现场变化能否进入财务报表？</td><td>收入确认、利润率、客户留存、替代风险、监管风险</td></tr></tbody></table></div>
+<h3 id="2.2-形式过时-本质不过时">2.2 形式过时，本质不过时</h3>
+<p>林奇书里有一些方法具有时代特征，例如给公司打电话、拜访总部、逛商场、问经纪人。今天不应机械照搬，但本质没有过时。</p>
+<div class="table-wrap"><table><thead><tr><th>林奇原方法</th><th>今天可能过时的地方</th><th>不过时的本质</th><th>今天可替代的方法</th></tr></thead><tbody><tr><td>逛商店、看门店</td><td>线下零售不覆盖所有商业模式</td><td>到真实交易现场观察需求</td><td>门店客流、线上评价、App排名、渠道调研、复购数据</td></tr><tr><td>向身边人了解产品</td><td>样本小，容易偏</td><td>从真实用户行为找线索</td><td>用户访谈、社群反馈、退款率、留存率、搜索热度</td></tr><tr><td>给公司打电话</td><td>普通投资者未必能获得增量信息，也有合规边界</td><td>主动核查关键假设</td><td>财报电话会、业绩说明会、公告问答、投资者纪要</td></tr><tr><td>拜访总部</td><td>成本高，容易看到公司展示面</td><td>观察管理层风格和资本纪律</td><td>历史并购、回购、分红、增发、薪酬激励、关联交易</td></tr><tr><td>阅读年报</td><td>信息滞后</td><td>用事实约束故事</td><td>年报、季报、公告、监管文件、同业对比、招股书</td></tr></tbody></table></div>
+<h3 id="2.3-产品好-公司好-股票好-是三件不同的事">2.3 产品好、公司好、股票好，是三件不同的事</h3>
+<div class="table-wrap"><table><thead><tr><th>层级</th><th>说明</th><th>必问问题</th></tr></thead><tbody><tr><td>好产品</td><td>只是线索</td><td>产品占公司收入和利润多少？</td></tr><tr><td>好公司</td><td>商业模式可能成立</td><td>成功能否复制？利润率和现金流是否好？</td></tr><tr><td>好股票</td><td>价格仍有吸引力</td><td>估值是否已经透支好消息？</td></tr></tbody></table></div>
+<p>一个消费线索必须先过六个问题：</p>
+<ol><li>这个产品或服务占公司收入多少？</li><li>它占利润多少？</li><li>毛利率和现金流是否好？</li><li>是一次性爆品，还是反复购买？</li><li>成功能否跨门店、跨地区、跨渠道复制？</li><li>当前估值是否已经反映完好消息？</li></ol>
+<p>如果产品占比很小，它只是新闻，不是投资理由。如果模式不能复制，它只是好体验，不是成长股。如果估值已经很高，它可能是好公司，但不是好股票。</p>
+<h3 id="2.4-关键案例-la-quinta-与-bildner-s">2.4 关键案例：La Quinta 与 Bildner&#x27;s</h3>
+<div class="table-wrap"><table><thead><tr><th>案例</th><th>发现方式</th><th>关键验证</th><th>结果</th><th>教训</th></tr></thead><tbody><tr><td>La Quinta</td><td>问行业人士“最强对手是谁”</td><td>客房质量接近假日酒店，价格低约30%，砍掉会议室/餐厅，专注小商人，模型可复制</td><td>成为大牛股</td><td>好线索必须转化成可复制的经营模型</td></tr><tr><td>Bildner&#x27;s</td><td>办公室对面三明治好吃</td><td>没有充分验证离开本地后能否复制，扩张失败</td><td>股价大跌</td><td>好产品不等于好股票，单店体验不能替代商业模式</td></tr></tbody></table></div>
+<h2 id="3.-公司定性-六类公司决定六种研究问题">3. 公司定性：六类公司决定六种研究问题</h2>
+
+<figure class="visual matrix-visual">
+  <figcaption>图3：六类公司不是标签，而是六套问题</figcaption>
+  <div class="type-cards">
+    <div><span>缓慢增长型</span><b>股息题</b><em>股息安全吗？</em></div>
+    <div><span>稳定增长型</span><b>价格题</b><em>好公司是否买贵？</em></div>
+    <div><span>快速增长型</span><b>复制题</b><em>增长能复制多久？</em></div>
+    <div><span>周期型</span><b>位置题</b><em>周期在哪里？</em></div>
+    <div><span>困境反转型</span><b>生存题</b><em>会不会先死？</em></div>
+    <div><span>隐蔽资产型</span><b>释放题</b><em>资产能否兑现？</em></div>
+  </div>
+</figure>
+
+<p>对应原书主题：第7章“6种类型公司股票”。</p>
+<p>林奇的六类公司不是标签，而是问题生成器。分类一错，估值、追踪和卖出都会错。</p>
+<h3 id="3.1-分类第一问-股东收益主要来自哪里">3.1 分类第一问：股东收益主要来自哪里？</h3>
+
+<figure class="visual decision-visual">
+  <figcaption>图4：公司类型判断图</figcaption>
+  <div class="decision-map">
+    <div class="decision-start">这笔投资主要赚什么钱？</div>
+    <div><b>股息和低预期</b><span>缓慢增长型</span><em>股息是否安全？</em></div>
+    <div><b>稳健盈利增长</b><span>稳定增长型</span><em>好公司是否买贵？</em></div>
+    <div><b>可复制扩张</b><span>快速增长型</span><em>增长能复制多久？</em></div>
+    <div><b>供需周期反弹</b><span>周期型</span><em>周期位置在哪里？</em></div>
+    <div><b>活下来后的修复</b><span>困境反转型</span><em>会不会先死？</em></div>
+    <div><b>资产重估释放</b><span>隐蔽资产型</span><em>扣债后还值多少？</em></div>
+  </div>
+</figure>
+
+<p>判断公司类型时，不要先看行业名称，也不要先看股价涨跌。先问：<strong>这笔投资的收益主要从哪里来？</strong></p>
+<div class="table-wrap"><table><thead><tr><th>第一判断</th><th>更可能的类型</th><th>继续问</th></tr></thead><tbody><tr><td>收益主要来自稳定股息，增长很慢</td><td>缓慢增长型</td><td>股息安全吗？现金流能否覆盖？上涨30%-50%后还有吸引力吗？</td></tr><tr><td>公司已经很大，收益稳健增长，目标是阶段性稳健回报</td><td>稳定增长型</td><td>PE是否合理？增长是否还能保持？衰退时会不会明显受损？</td></tr><tr><td>公司规模仍不大，盈利已验证，增长可复制</td><td>快速增长型</td><td>扩张空间多大？新市场能否复制？PE是否低于或接近增长率？</td></tr><tr><td>利润主要由价格、库存、产能、商品周期决定</td><td>周期型</td><td>周期处在底部、上行段还是顶部？低PE是不是周期顶部陷阱？</td></tr><tr><td>公司当前有严重问题，关键在能不能活下来</td><td>困境反转型</td><td>现金能撑多久？债务是否可控？亏损源是否被处理？</td></tr><tr><td>市值明显低于现金、地产、牌照、子公司等资产扣债后价值</td><td>隐蔽资产型</td><td>资产是否真实？债务扣除后还剩多少？价值何时释放？</td></tr></tbody></table></div>
+<p>混合类型很常见。处理原则是：<strong>先找主导收益来源，再按主导类型估值和追踪。</strong>例如一家快速增长公司如果增长耗尽，可能迁移为稳定增长型；一家困境反转公司如果已经活过来，也要重新分类，不能继续用“反转弹性”解释它。</p>
+<h3 id="3.2-六类公司深度对比">3.2 六类公司深度对比</h3>
+<div class="table-wrap"><table><thead><tr><th>维度</th><th>缓慢增长型</th><th>稳定增长型</th><th>快速增长型</th><th>周期型</th><th>困境反转型</th><th>隐蔽资产型</th></tr></thead><tbody><tr><td>典型增速</td><td>2%-4%</td><td>10%-12%</td><td>20%-25%</td><td>大幅波动</td><td>亏损到盈利</td><td>不一定增长</td></tr><tr><td>常见合理PE</td><td>低PE，股息为主</td><td>约10-14倍视增长而定</td><td>PE应与增长匹配</td><td>不能机械看PE</td><td>常无稳定PE</td><td>看资产折价</td></tr><tr><td>你买的是什么</td><td>股息和低预期</td><td>稳健复利</td><td>可复制增长</td><td>周期上升段</td><td>重生弹性</td><td>被忽视财富</td></tr><tr><td>核心问题</td><td>股息安全吗？</td><td>好公司是否买贵？</td><td>增长还能持续多久？</td><td>周期位置在哪里？</td><td>会不会先死？</td><td>资产能否兑现？</td></tr><tr><td>最大误判</td><td>用十倍股预期买股息股</td><td>好公司买太贵</td><td>单点成功当全国复制</td><td>PE低时误以为便宜</td><td>跌多了就以为会反弹</td><td>只看账面不扣债务</td></tr><tr><td>卖出逻辑</td><td>股息吸引力下降或涨30%-50%</td><td>PE过高或增长放缓</td><td>增长证伪或估值透支</td><td>周期顶部信号出现</td><td>转危为安后重分类</td><td>资产被发现或价值被侵蚀</td></tr></tbody></table></div>
+<h3 id="3.3-六类公司逐项手册">3.3 六类公司逐项手册</h3>
+<h4 id="缓慢增长型-不要用十倍股期待买股息股">缓慢增长型：不要用十倍股期待买股息股</h4>
+<p>缓慢增长型不是坏公司，但它的题型不是成长，而是股息和低预期。</p>
+<p>买入前看：</p>
+<ol><li>长期股息记录是否稳定。</li><li>股息是否持续提高。</li><li>派息率是否过高。</li><li>现金流是否覆盖股息。</li><li>公司是否缺乏新增长点。</li></ol>
+<p>卖出信号：</p>
+<ol><li>上涨30%-50%，但没有新增长逻辑。</li><li>连续两年市场份额流失。</li><li>削减研发、吃老本。</li><li>收购无关业务导致资产负债表恶化。</li><li>即使股价低，股息收益率仍没有吸引力。</li></ol>
+<h4 id="稳定增长型-价格纪律比公司质量更重要">稳定增长型：价格纪律比公司质量更重要</h4>
+<p>稳定增长型的错误通常不是买到烂公司，而是好公司买贵了。林奇对这类公司的预期常常是30%-50%的阶段性收益，而不是十倍股。</p>
+<p>买入前看：</p>
+<ol><li>PE是否低于或接近公司历史水平。</li><li>PE是否低于或接近同类公司。</li><li>长期收益增长是否仍稳定。</li><li>经济衰退中是否相对抗跌。</li><li>主营业务是否被多元化稀释。</li></ol>
+<p>卖出信号：</p>
+<ol><li>股价线超过收益线。</li><li>PE远超正常水平或同业水平。</li><li>管理层和董事过去一年没有买入。</li><li>占利润较大比例的业务容易受经济衰退冲击。</li><li>增长率放缓且成本削减空间有限。</li></ol>
+<h4 id="快速增长型-林奇最喜欢-但必须证明可复制">快速增长型：林奇最喜欢，但必须证明可复制</h4>
+<p>快速增长型不是“行业很热”，而是“公司有一套已经验证、还能继续复制的增长机器”。林奇尤其喜欢低增长行业中的快速增长公司，因为竞争少、预期低、增长更容易留下利润。</p>
+<p>最佳阶段不是创业期，而是第二阶段复制扩张期：</p>
+<div class="table-wrap"><table><thead><tr><th>阶段</th><th>状态</th><th>投资含义</th></tr></thead><tbody><tr><td>第一阶段</td><td>产品或门店模型还在证明</td><td>想象空间大，失败率高</td></tr><tr><td>第二阶段</td><td>模式已证明，扩张空间仍大</td><td>林奇式投资最适合介入</td></tr><tr><td>第三阶段</td><td>增长接近饱和，需要新故事</td><td>容易高估，PE可能压缩</td></tr></tbody></table></div>
+<p>买入前看：</p>
+<ol><li>公司已经盈利，资产负债表稳健。</li><li>收益增长约20%-25%，过高反而要怀疑可持续性。</li><li>成功模型已经在多个市场验证。</li><li>仍有足够扩张空间。</li><li>PE接近或低于增长率。</li><li>机构持股和分析师关注还不拥挤。</li><li>产品或服务具有复购、利基或低竞争环境。</li></ol>
+<p>卖出信号：</p>
+<ol><li>同店销售下降。</li><li>新开分店表现差。</li><li>高级管理人员和核心员工离职去竞争对手。</li><li>公司开始密集路演并被机构热捧。</li><li>PE达到30倍，但未来两年乐观增长只有15%-20%。</li><li>增长空间接近饱和。</li></ol>
+<h4 id="周期型-不要被低pe欺骗">周期型：不要被低PE欺骗</h4>
+<p>周期股的利润最好时，PE往往最低；利润最差时，PE反而可能最高甚至没有PE。研究周期股，核心不是“便宜”，而是周期位置。</p>
+<p>买入前看：</p>
+<ol><li>行业库存是否下降。</li><li>商品价格是否企稳或上涨。</li><li>产能利用率是否改善。</li><li>竞争对手是否退出。</li><li>新产能是否被控制。</li><li>终端需求是否恢复。</li><li>公司成本位置是否有竞争力。</li></ol>
+<p>卖出信号：</p>
+<ol><li>成本上升。</li><li>工厂满负荷运行且公司开始扩产。</li><li>存货不断增加且处理不掉。</li><li>大宗商品价格下跌。</li><li>期货价格低于现货。</li><li>新竞争者进入并降价。</li><li>最终需求下降。</li></ol>
+<h4 id="困境反转型-先证明不会死-再谈上涨空间">困境反转型：先证明不会死，再谈上涨空间</h4>
+<p>困境反转股最诱人的是弹性，最危险的是公司可能先死。跌幅不是买入理由，生存时间才是核心。</p>
+<p>常见亚型：</p>
+<ol><li>外部救助型。</li><li>问题没预想严重型。</li><li>破产母公司中含优质子公司型。</li><li>剥离亏损业务、重组、削减成本型。</li><li>重新聚焦主业型。</li></ol>
+<p>买入前看：</p>
+<ol><li>现金能撑多久。</li><li>短债和长期债结构如何。</li><li>债权人是否能立刻逼债。</li><li>亏损源是否被关闭、剥离或重组。</li><li>主业是否出现修复证据。</li><li>是否有资产可卖，卖价是否可信。</li><li>是否存在养老金、诉讼、担保等隐藏义务。</li><li>是否可能通过增发严重稀释老股东。</li></ol>
+<p>卖出信号：</p>
+<ol><li>公司已经成功转危为安，需要重新分类。</li><li>连续下降的债务重新上升。</li><li>存货增长速度是销售增长速度的两倍。</li><li>PE相对预期增长过高。</li><li>最强业务过度依赖一个正在放缓的大客户。</li></ol>
+<h4 id="隐蔽资产型-账面价值只是线索-真实价值才有用">隐蔽资产型：账面价值只是线索，真实价值才有用</h4>
+<p>隐蔽资产可能是现金、地产、矿权、牌照、媒体资产、税损、子公司股权、品牌或专利。难点是：资产存在，不等于普通股东能拿到。</p>
+<p>买入前看：</p>
+<ol><li>资产真实价值是多少。</li><li>资产是否能出售或释放。</li><li>债务、税费、少数股权要扣掉多少。</li><li>管理层是否会继续乱收购或增发。</li><li>是否有并购者、激进投资者、分拆、回购等催化剂。</li><li>市场是否真的没有识别这部分价值。</li></ol>
+<p>卖出信号：</p>
+<ol><li>被收购或资产价值被市场充分发现。</li><li>公司发行超过总股本10%的新股去做多元化。</li><li>资产实际售价低于预期。</li><li>税率变化削弱税损价值。</li><li>机构持股大幅上升，冷门优势消失。</li></ol>
+<h3 id="3.4-类型迁移">3.4 类型迁移</h3>
+<p>同一家公司会改变类型。你买入时的题型，可能不是持有三年后的题型。</p>
+<div class="table-wrap"><table><thead><tr><th>原类型</th><th>可能迁移到</th><th>触发条件</th><th>投资动作</th></tr></thead><tbody><tr><td>快速增长型</td><td>稳定增长型</td><td>规模变大，扩张空间下降，增长率回落</td><td>降低增长预期，重算合理PE</td></tr><tr><td>快速增长型</td><td>困境反转型</td><td>盲目扩张、负债上升、新店失败、现金流恶化</td><td>先看生存，不再用成长股逻辑持有</td></tr><tr><td>稳定增长型</td><td>缓慢增长型</td><td>主业成熟，增长接近GDP，股息成为主要回报</td><td>看股息安全性和估值</td></tr><tr><td>稳定增长型</td><td>困境反转型</td><td>多元恶化、主业受损、债务压力上升</td><td>重新评估现金、债务、亏损源</td></tr><tr><td>周期型</td><td>困境反转型</td><td>周期低谷叠加高杠杆和管理失误</td><td>不再只看周期复苏，先看债务期限</td></tr><tr><td>困境反转型</td><td>稳定/周期/资产型</td><td>危机解除，市场重新认识公司</td><td>重新分类，按新类型估值</td></tr></tbody></table></div>
+<h2 id="4.-质量验证-13条正面线索与6类排除对象">4. 质量验证：13条正面线索与6类排除对象</h2>
+
+<figure class="visual filter-visual">
+  <figcaption>图5：质量验证不是加分表，而是筛选漏斗</figcaption>
+  <div class="funnel">
+    <div><strong>正面线索</strong><span>低关注、业务简单、有利基、复购、内部人买入、回购</span></div>
+    <div><strong>排除对象</strong><span>热门股、下一个、多元恶化、耳语股、大客户依赖、花哨名字</span></div>
+    <div><strong>结论</strong><span>进入深研 / 继续观察 / 直接排除</span></div>
+  </div>
+</figure>
+
+<p>对应原书主题：第8章“13条选股准则”和第9章“我避而不买的股票”。</p>
+<p>林奇喜欢的公司，不是宏大叙事公司，而是低关注、可理解、竞争少、财务好、管理层对股东友好的公司。</p>
+<h3 id="4.1-13条正面线索">4.1 13条正面线索</h3>
+<p>这13条不是迷信冷门，而是在寻找三类特征：<strong>华尔街不理、竞争者不进、客户离不开。</strong></p>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>线索</th><th>方法论含义</th><th>典型案例/提示</th></tr></thead><tbody><tr><td>1</td><td>公司名字枯燥甚至可笑</td><td>低关注、低预期</td><td>Pep Boys、ADP</td></tr><tr><td>2</td><td>业务枯燥</td><td>竞争少、报道少</td><td>瓶盖瓶塞、优惠券处理</td></tr><tr><td>3</td><td>业务令人厌恶或压抑</td><td>市场天然回避</td><td>清洗油污、垃圾处理、殡葬服务</td></tr><tr><td>4</td><td>从母公司分拆</td><td>被机构忽略，管理层释放</td><td>小贝尔、玩具反斗城</td></tr><tr><td>5</td><td>机构持股少、分析师少</td><td>发现前阶段</td><td>小银行、保险、地方公司</td></tr><tr><td>6</td><td>被谣言或偏见压低</td><td>市场误解</td><td>垃圾处理、赌场等曾被偏见压低</td></tr><tr><td>7</td><td>处于低增长或冷门行业</td><td>新进入者少</td><td>低增长行业中的增长公司</td></tr><tr><td>8</td><td>有利基或特许权</td><td>利润留得住</td><td>石料场、区域报纸、专利药、品牌</td></tr><tr><td>9</td><td>产品反复购买</td><td>收入持续性强</td><td>药品、软饮料、剃须刀片</td></tr><tr><td>10</td><td>是高技术产品的用户</td><td>享受技术降本，而不是承担技术竞争</td><td>用电脑降本的服务公司</td></tr><tr><td>11</td><td>内部人士买入</td><td>利益一致，股价可能低估</td><td>多名管理层买入比单一高管更有力</td></tr><tr><td>12</td><td>公司回购股票</td><td>资本配置对股东友好</td><td>回购减少股本，提高每股收益</td></tr><tr><td>13</td><td>财务记录稳健</td><td>故事有数字支撑</td><td>收益、现金、负债、存货一起看</td></tr></tbody></table></div>
+<h3 id="4.2-6类排除对象">4.2 6类排除对象</h3>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>排除对象</th><th>为什么危险</th><th>现代化识别方式</th></tr></thead><tbody><tr><td>1</td><td>热门行业的热门股</td><td>高竞争、高估值、好消息已定价</td><td>高融资、高热度、高估值，增长必须连续超预期</td></tr><tr><td>2</td><td>被吹捧成“下一个XX”的公司</td><td>模仿者常晚到，质量不如原公司</td><td>只比较商业模式，不接受称号</td></tr><tr><td>3</td><td>多元恶化</td><td>公司拿股东的钱买不懂业务</td><td>并购频繁、主业分散、负债上升、协同不清</td></tr><tr><td>4</td><td>小声耳语股</td><td>故事诱人但没有收益和证据</td><td>概念多、现金流弱、研发故事无法验证</td></tr><tr><td>5</td><td>过度依赖大客户的供应商</td><td>议价权弱，客户取消订单会致命</td><td>单一客户占收入25%-50%要警惕</td></tr><tr><td>6</td><td>名字花哨的公司</td><td>包装掩盖普通业务</td><td>先看业务和财务，不被名称、概念、缩写影响</td></tr></tbody></table></div>
+<p>筛选结论只允许三种：</p>
+<ol><li><strong>进入深度研究</strong>：线索重要、分类清楚、质量过关。</li><li><strong>继续观察</strong>：线索有意义，但关键事实还没出现。</li><li><strong>直接排除</strong>：落入排除清单，或故事无法被财务支持。</li></ol>
+<h2 id="5.-估值与财务-价格-增长-现金-负债">5. 估值与财务：价格、增长、现金、负债</h2>
+<p>对应原书主题：第10章“收益，收益，还是收益”和第13章“一些重要的财务分析指标”。</p>
+<p>估值只回答三个问题：</p>
+<ol><li>现在的价格贵不贵。</li><li>公司能不能撑到故事兑现。</li><li>增长有没有转成现金。</li></ol>
+<p>因此，买入前至少要同时看四件事：<strong>PE与增长率、现金、负债、现金流。</strong>好故事如果没有收益和现金支持，就是想象；好公司如果价格太高，也会变成坏股票。</p>
+<h3 id="5.1-pe与增长率">5.1 PE与增长率</h3>
+<p>基础规则：</p>
+<pre><code>合理PE ≈ 收益增长率</code></pre>
+<p>使用方式：</p>
+<div class="table-wrap"><table><thead><tr><th>情况</th><th>判断</th></tr></thead><tbody><tr><td>PE约等于增长率</td><td>大致合理</td></tr><tr><td>PE只有增长率一半</td><td>可能有吸引力</td></tr><tr><td>PE是增长率两倍</td><td>风险很高</td></tr><tr><td>极高PE</td><td>要求极高且长期的盈利增长，通常很难兑现</td></tr></tbody></table></div>
+<p>加入股息后的粗略判断：</p>
+<pre><code>(长期收益增长率 + 股息收益率) / PE</code></pre>
+<div class="table-wrap"><table><thead><tr><th>结果</th><th>判断</th></tr></thead><tbody><tr><td>小于1</td><td>不理想</td></tr><tr><td>约1.5</td><td>不错</td></tr><tr><td>大于等于2</td><td>很有吸引力</td></tr></tbody></table></div>
+<h3 id="5.2-估值速算表">5.2 估值速算表</h3>
+<p>这张表不是机械买卖规则，而是压力测试起点。</p>
+<div class="table-wrap"><table><thead><tr><th>增长率</th><th>大致合理PE</th><th>可能便宜</th><th>明显昂贵</th></tr></thead><tbody><tr><td>5%</td><td>5-7</td><td>&lt;5</td><td>&gt;10</td></tr><tr><td>10%</td><td>10-12</td><td>&lt;10</td><td>&gt;20</td></tr><tr><td>15%</td><td>15-18</td><td>&lt;15</td><td>&gt;30</td></tr><tr><td>20%</td><td>18-22</td><td>&lt;18</td><td>&gt;40</td></tr><tr><td>25%</td><td>22-28</td><td>&lt;22</td><td>&gt;50</td></tr></tbody></table></div>
+<p>高PE灾难的共同点不是“公司完全没价值”，而是价格要求未来过于完美。EDS、宝丽来、雅芳这类案例都说明：<strong>好公司如果用离谱价格买入，也会变成高风险股票。</strong></p>
+<h3 id="5.3-现金与负债">5.3 现金与负债</h3>
+<p>现金不是装饰，尤其对困境反转型、周期型和隐蔽资产型很关键。</p>
+<pre><code>净现金 = 现金 + 有价证券 - 长期负债
+每股净现金 = 净现金 / 流通股数
+实际买入价 = 股价 - 每股净现金
+实际PE = 实际买入价 / 每股收益</code></pre>
+<p>负债分析必须问：</p>
+<ol><li>总负债多少。</li><li>短债还是长期债。</li><li>债权人是否能随时要求还款。</li><li>经营现金流能否覆盖利息和到期债务。</li><li>困境公司能撑多久。</li></ol>
+<h3 id="5.4-12项财务指标速查">5.4 12项财务指标速查</h3>
+<div class="table-wrap"><table><thead><tr><th>指标</th><th>主要用途</th><th>危险信号</th></tr></thead><tbody><tr><td>产品/业务占比</td><td>判断线索是否足够重要</td><td>好产品占比太小</td></tr><tr><td>PE</td><td>判断价格要求</td><td>PE远高于增长</td></tr><tr><td>现金头寸</td><td>判断安全垫</td><td>现金被乱收购消耗</td></tr><tr><td>负债结构</td><td>判断生存时间</td><td>短债压力、再融资困难</td></tr><tr><td>股息</td><td>判断低增长/稳定股回报</td><td>派息率过高</td></tr><tr><td>账面价值</td><td>判断资产保护</td><td>资产卖不出、存货贬值</td></tr><tr><td>隐蔽资产</td><td>判断市场遗漏</td><td>债务和税费吃掉价值</td></tr><tr><td>现金流</td><td>判断利润质量</td><td>盈利增长但现金流差</td></tr><tr><td>存货</td><td>判断需求和周期</td><td>存货增速高于销售</td></tr><tr><td>养老金/或有负债</td><td>判断隐藏义务</td><td>报表外压力</td></tr><tr><td>增长率</td><td>判断收益来源</td><td>增长不可持续</td></tr><tr><td>税后利润率</td><td>判断成本优势</td><td>行业好时利润率不升，行业差时扛不住</td></tr></tbody></table></div>
+<h3 id="5.5-增长率来自哪里">5.5 增长率来自哪里</h3>
+<p>收益增长通常来自五类来源：</p>
+<ol><li>削减成本。</li><li>提高售价。</li><li>开拓新市场。</li><li>在原市场卖出更多产品。</li><li>重振、关闭或剥离亏损业务。</li></ol>
+<p>你要判断的是：增长来自一次性动作，还是可持续机制。林奇更偏好20%-25%这种可持续增长，而不是看起来高得离谱、但很难长期维持的增长。</p>
+<h2 id="6.-信息核查-用资料验证公司逻辑">6. 信息核查：用资料验证公司逻辑</h2>
+<p>对应原书主题：第12章“如何获得真实的公司信息”。</p>
+<p>信息核查的目的不是收集更多观点，而是找事实来证明或推翻自己的买入故事。</p>
+<h3 id="6.1-核查对象">6.1 核查对象</h3>
+<div class="table-wrap"><table><thead><tr><th>核查对象</th><th>要回答的问题</th><th>主要资料</th><th>容易犯的错</th></tr></thead><tbody><tr><td>信息披露文件</td><td>公司自己披露了哪些事实，管理层如何解释业务变化</td><td>年报、半年报、季报、临时公告、招股书、电话会/业绩说明会纪要</td><td>把管理层叙事当结论，不回到数据验证</td></tr><tr><td>三张财务报表</td><td>利润是否真实，现金是否流入，资产负债表是否安全</td><td>利润表、资产负债表、现金流量表，以及附注</td><td>把报表和披露文件混为一层；只看收入增长，不看现金和负债</td></tr><tr><td>分部与经营数据</td><td>线索影响的业务是否足够重要，增长来自哪里</td><td>分部收入/利润、产品占比、地区数据、门店数据、客户结构</td><td>好产品占比太小，却当成公司整体变化</td></tr><tr><td>经营现场</td><td>产品、服务、渠道、客户是否真的变好</td><td>门店、用户评价、渠道反馈、客户访谈</td><td>把个别体验当成整体趋势</td></tr><tr><td>行业变量</td><td>供需、价格、库存、竞争是否支持公司</td><td>行业数据、价格数据、竞品公告、产能变化</td><td>只看行业热度，不看公司位置</td></tr><tr><td>管理层行为</td><td>管理层是否站在股东一边</td><td>回购、增发、并购、分红、内部人买卖</td><td>听管理层叙事，不看资本配置结果</td></tr><tr><td>市场定价</td><td>好消息是否已经被充分定价</td><td>PE、增长率、机构持股、分析师覆盖、股价预期</td><td>好公司买成坏价格</td></tr></tbody></table></div>
+<h3 id="6.2-不要问股价-问事实">6.2 不要问股价，问事实</h3>
+<p>不要问：“为什么股价下跌？” 应该问：</p>
+<ol><li>收入增长来自价格、销量、新产品、渠道，还是并表？</li><li>毛利率、费用率、库存、回款、客户集中度有没有恶化？</li><li>某个产品或业务线对收入和利润影响多大？</li><li>扩张靠资本开支、加盟、并购、提价，还是复购？</li><li>单位经济模型是否成立？</li><li>短债何时到期，现金流能否覆盖？</li><li>是否需要再融资或增发？</li><li>新竞争者、替代技术、价格战有没有改变？</li><li>我的投资假设哪里可能错？</li></ol>
+<h3 id="6.3-年报阅读顺序">6.3 年报阅读顺序</h3>
+<ol><li>现金和有价证券。</li><li>长期债务和短期债务。</li><li>净现金头寸。</li><li>流通股数量是否减少。</li><li>10年财务数据。</li><li>收益是否持续增长。</li><li>股息是否稳定。</li><li>存货是否异常。</li><li>养老金、诉讼、担保等或有负债。</li><li>资产价值是否被低估。</li></ol>
+<h2 id="7.-买入-两分钟投资故事">7. 买入：两分钟投资故事</h2>
+<p>对应原书主题：第11章“下单之前沉思两分钟”。</p>
+<p>两分钟投资故事不是漂亮文案，而是“真正看懂公司”的检验。可以把它理解为段永平所说“看懂一个公司”的口头版本：如果你真的看懂了，就应该能用两三分钟讲清楚公司靠什么赚钱、为什么未来会更好、价格是否合理、哪些事实会证明你错了。</p>
+<p>讲不清楚，就不该买。</p>
+<h3 id="7.1-通用八问">7.1 通用八问</h3>
+<ol><li>我为什么注意到这家公司？</li><li>它属于六类公司中的哪一种？</li><li>它靠什么提高收益？</li><li>这个增长、反转、周期或资产故事需要哪些事实成立？</li><li>当前估值要求它未来做到什么？</li><li>关键风险是什么？</li><li>买入后我要跟踪哪些指标？</li><li>什么情况下我会卖出或换仓？</li></ol>
+<h3 id="7.2-按类型写故事">7.2 按类型写故事</h3>
+<div class="table-wrap"><table><thead><tr><th>类型</th><th>两分钟故事重点</th></tr></thead><tbody><tr><td>缓慢增长型</td><td>股息是否安全，为什么当前价格仍有吸引力</td></tr><tr><td>稳定增长型</td><td>增长是否稳定，PE是否合理，是否有防御性</td></tr><tr><td>快速增长型</td><td>成功模式如何复制，扩张空间还有多大，PE是否透支</td></tr><tr><td>周期型</td><td>行业处在周期哪里，供需、库存、价格如何变化</td></tr><tr><td>困境反转型</td><td>为什么不会死，哪些事实说明它正在活过来</td></tr><tr><td>隐蔽资产型</td><td>资产值多少钱，债务扣多少，何时可能释放</td></tr></tbody></table></div>
+<p>不能通过两分钟故事的情况：</p>
+<ol><li>只会说“它会涨”。</li><li>只会说“产品很好”。</li><li>只会说“别人推荐”。</li><li>只会说“跌了很多”。</li><li>只会说“行业很热”。</li><li>说不清失败条件和卖出条件。</li></ol>
+<h2 id="8.-买后持续追踪-按公司类型建立观察指标">8. 买后持续追踪：按公司类型建立观察指标</h2>
+
+<figure class="visual dashboard-visual">
+  <figcaption>图6：买入后只盯和类型相关的变量</figcaption>
+  <div class="dash">
+    <div><b>快速增长</b><span>同店销售</span><span>新店表现</span><span>PE/增长</span></div>
+    <div><b>周期</b><span>库存</span><span>商品价格</span><span>产能</span></div>
+    <div><b>反转</b><span>现金消耗</span><span>债务期限</span><span>亏损源</span></div>
+    <div><b>资产</b><span>资产价值</span><span>债务</span><span>催化剂</span></div>
+  </div>
+</figure>
+
+<p>对应原书主题：第14章“定期重新核查公司分析”、第15章“股票分析要点一览表”、第16章“构建投资组合”。</p>
+<p>买入后不是每天问股价，而是问故事发生了什么差分。</p>
+<div class="table-wrap"><table><thead><tr><th>看到的变化</th><th>错误反应</th><th>正确追问</th></tr></thead><tbody><tr><td>股价上涨</td><td>我对了，所以继续拿</td><td>盈利、扩张、估值是否仍支持原故事？</td></tr><tr><td>股价下跌</td><td>我错了，所以止损</td><td>基本面变坏，还是价格给了机会？</td></tr><tr><td>公司并购</td><td>规模更大就是更好</td><td>是否相关？价格是否过高？资产负债表是否恶化？</td></tr><tr><td>快速扩张</td><td>增长越快越好</td><td>新店/新市场是否复制成功？资金和管理是否跟得上？</td></tr><tr><td>困境股反弹</td><td>反转开始了，继续等十倍</td><td>债务是否下降？问题是否解决？是否应重新分类？</td></tr></tbody></table></div>
+<h3 id="8.1-类型化追踪仪表盘">8.1 类型化追踪仪表盘</h3>
+<div class="table-wrap"><table><thead><tr><th>类型</th><th>追踪指标</th><th>观察频率</th><th>行动规则</th></tr></thead><tbody><tr><td>快速增长型</td><td>同店销售、新店表现、扩张空间、PE/增长率、机构拥挤度</td><td>每季</td><td>增长强且估值合理，持有或加仓；同店下滑或新店失败，降级研究</td></tr><tr><td>周期型</td><td>库存、商品价格、产能、订单、竞争者进入</td><td>高频/每季</td><td>供需改善时持有；库存和价格转坏时卖出</td></tr><tr><td>困境反转型</td><td>现金消耗、债务期限、成本削减、亏损业务、客户恢复</td><td>每季/事件驱动</td><td>生存事实改善才持有；债务恶化或增发风险上升，卖出</td></tr><tr><td>隐蔽资产型</td><td>资产价值、债务、资产出售、并购者、资本配置</td><td>每季/事件驱动</td><td>资产释放前持有；债务和增发侵蚀价值，卖出</td></tr><tr><td>稳定增长型</td><td>收益增长、PE、核心业务、成本削减空间</td><td>每季</td><td>增长稳定且PE合理持有；PE过高或增长放缓，换仓</td></tr><tr><td>缓慢增长型</td><td>股息、派息率、现金流、市场份额</td><td>每半年</td><td>股息安全才持有；股息吸引力消失或业务恶化，卖出</td></tr></tbody></table></div>
+<h3 id="8.2-监控失败案例-得克萨斯航空">8.2 监控失败案例：得克萨斯航空</h3>
+<p>林奇曾在得克萨斯航空上经历过一个典型错误：低价买入后股价大涨，后来在高位追加，却忽视了行李丢失、航班混乱、员工不满、劳资纠纷等基本面恶化信号。股价从高位大幅回落。</p>
+<p>教训：<strong>不要被股价上涨冲昏头脑。基本面变坏就是卖出信号，和你赚了多少无关。</strong></p>
+<h2 id="9.-卖出-换仓-故事破裂-估值过高-机会更好">9. 卖出/换仓：故事破裂、估值过高、机会更好</h2>
+
+<figure class="visual sell-tree">
+  <figcaption>图7：卖出不是止盈止损，而是检查故事</figcaption>
+  <div class="tree-grid">
+    <div class="tree-node root">买入故事还成立吗？</div>
+    <div class="tree-node bad">否：卖出</div>
+    <div class="tree-node ask">是：类型变了吗？</div>
+    <div class="tree-node warn">变了：重新分类重估</div>
+    <div class="tree-node ask">没变：估值透支吗？</div>
+    <div class="tree-node warn">透支：减仓/换仓</div>
+    <div class="tree-node good">没有：继续持有并复查</div>
+  </div>
+</figure>
+
+<p>对应原书主题：第17章“买入和卖出的最佳时机选择”、第18章“12种危险说法”、第20章“长期投资”。</p>
+<p>林奇的卖出原则不是止盈止损，而是：<strong>如果你知道为什么买，就应该知道什么时候卖。</strong></p>
+<h3 id="9.1-卖出总顺序">9.1 卖出总顺序</h3>
+<div class="table-wrap"><table><thead><tr><th>顺序</th><th>问题</th><th>触发动作</th></tr></thead><tbody><tr><td>1</td><td>买入故事还成立吗？</td><td>不成立就卖出</td></tr><tr><td>2</td><td>公司类型是否已经迁移？</td><td>重新分类，按新类型重估</td></tr><tr><td>3</td><td>估值是否严重透支未来？</td><td>减仓、卖出或换到更好机会</td></tr><tr><td>4</td><td>是否出现更强、更便宜、更可验证的机会？</td><td>换仓</td></tr><tr><td>5</td><td>以上都没有触发</td><td>继续持有并定期复查</td></tr></tbody></table></div>
+<p>林奇反对以下卖出理由：</p>
+<ol><li>股价涨了一倍，所以卖。</li><li>股价跌了20%，所以卖。</li><li>大盘可能下跌，所以卖。</li><li>等反弹到买入价再卖。</li><li>这只股票太无聊，所以卖。</li><li>别人说见好就收，所以卖。</li></ol>
+<h3 id="9.2-按类型卖出表">9.2 按类型卖出表</h3>
+<div class="table-wrap"><table><thead><tr><th>类型</th><th>核心卖出信号</th></tr></thead><tbody><tr><td>缓慢增长型</td><td>上涨30%-50%、股息吸引力下降、市场份额流失、多元恶化</td></tr><tr><td>稳定增长型</td><td>PE远高于历史/同业、增长放缓、利润部门受衰退冲击</td></tr><tr><td>快速增长型</td><td>扩张放慢、同店销售下降、空间耗尽、估值远高于增长、机构过度拥挤</td></tr><tr><td>周期型</td><td>存货增加、商品价格下跌、产能扩张、需求下降、竞争者进入</td></tr><tr><td>困境反转型</td><td>已经转危为安、债务重新增加、库存异常、反转故事结束</td></tr><tr><td>隐蔽资产型</td><td>被收购、资产价值被发现、债务侵蚀资产、发行股票做多元化</td></tr></tbody></table></div>
+<h3 id="9.3-卖出前的最后七问">9.3 卖出前的最后七问</h3>
+<ol><li>如果今天没有持有，我还会用今天的价格买入吗？</li><li>我卖出是因为基本面，还是因为股价？</li><li>买入理由是否已经失效？</li><li>是否只是受到市场噪音影响？</li><li>如果股价再跌25%，我愿不愿意加仓？</li><li>如果不愿意加仓，为什么还持有？</li><li>卖出后资金要去哪里，新机会是否更好？</li></ol>
+<h2 id="10.-组合管理与心理护盾">10. 组合管理与心理护盾</h2>
+<p>对应原书主题：第16章、第18章、第19章、第20章。</p>
+<h3 id="10.1-收益目标和持股数量">10.1 收益目标和持股数量</h3>
+<ol><li>市场长期平均约9%-10%。</li><li>如果自己选股，长期目标应争取12%-15%，否则指数基金更省力。</li><li>25%-30%的长期年化预期不现实，会诱导冒险和频繁交易。</li><li>小组合通常3-10只比较合理，但关键不是数量，而是你是否真正研究过。</li><li>为了分散而买不懂的股票，是愚蠢的多元化。</li></ol>
+<p>林奇的组合不是平均铺开，而是把资金从故事变弱的公司转移到故事更强的公司。不要“拔掉鲜花浇灌野草”：不要卖出基本面变好的赢家，去补仓基本面变差的输家。</p>
+<h3 id="10.2-类型配置">10.2 类型配置</h3>
+<div class="table-wrap"><table><thead><tr><th>类型</th><th>在组合中的作用</th></tr></thead><tbody><tr><td>稳定增长型</td><td>降低组合波动</td></tr><tr><td>快速增长型</td><td>提供长期复利</td></tr><tr><td>周期型</td><td>提供阶段弹性</td></tr><tr><td>困境反转型</td><td>提供非市场相关机会</td></tr><tr><td>隐蔽资产型</td><td>提供资产重估机会</td></tr></tbody></table></div>
+<p>配置不是机械比例，而是根据你能理解、能验证、价格合理的机会调整。</p>
+<h3 id="10.3-12种危险说法">10.3 12种危险说法</h3>
+<div class="table-wrap"><table><thead><tr><th>危险说法</th><th>纠正</th></tr></thead><tbody><tr><td>跌这么多，不可能再跌了</td><td>可以跌到零</td></tr><tr><td>总能知道什么时候到底</td><td>底部只有事后才知道</td></tr><tr><td>涨这么高，不可能再涨</td><td>好公司没有人为上限</td></tr><tr><td>股价只有几美元，亏不了多少</td><td>跌到零都是亏100%</td></tr><tr><td>最终会涨回来</td><td>烂公司可能永远回不来</td></tr><tr><td>黎明前总是最黑暗</td><td>有时黑暗之后更黑</td></tr><tr><td>反弹到某价位我再卖</td><td>心理价位不是基本面</td></tr><tr><td>保守股不会大跌</td><td>蓝筹也会大跌</td></tr><tr><td>等太久，不可能涨了</td><td>基本面增长可能多年后才反映</td></tr><tr><td>我错过了，损失很大</td><td>没买不亏钱</td></tr><tr><td>我要抓住下一只同类股</td><td>“下一个XX”常是陷阱</td></tr><tr><td>上涨证明我对，下跌证明我错</td><td>股价短期不能证明基本面</td></tr></tbody></table></div>
+<h3 id="10.4-远离复杂工具">10.4 远离复杂工具</h3>
+<p>林奇把期权、期货、卖空放在长期投资体系之外。原因不是这些工具永远不能赚钱，而是它们会把投资者从研究企业拉回预测价格。</p>
+<div class="table-wrap"><table><thead><tr><th>工具</th><th>核心问题</th></tr></thead><tbody><tr><td>期权</td><td>到期日会强迫你在错误时间做判断</td></tr><tr><td>期货</td><td>杠杆高，波动放大，容易变成短线投机</td></tr><tr><td>投资组合保险</td><td>机械卖出会在大跌中放大踩踏</td></tr><tr><td>卖空</td><td>理论收益有限，亏损可能无限，且泡沫能持续很久</td></tr></tbody></table></div>
+<h2 id="11.-三个高频问题">11. 三个高频问题</h2>
+<h3 id="11.1-什么时候卖">11.1 什么时候卖？</h3>
+<p>不是涨了卖，不是跌了卖，而是：</p>
+<ol><li><strong>故事结束就卖。</strong> 买入理由消失，不管盈亏都卖。</li><li><strong>估值极端就卖。</strong> 股价已经提前透支未来增长。</li><li><strong>类型变化就重估。</strong> 困境反转成功后，不再用反转逻辑持有。</li><li><strong>有更好机会就换。</strong> 卖出不是逃离股市，而是在更好基本面之间配置资金。</li></ol>
+<p>最实用的一句话：<strong>买入时写下故事，卖出时只检查故事。</strong></p>
+<h3 id="11.2-要不要做宏观分析">11.2 要不要做宏观分析？</h3>
+<p>要，但位置要放对。</p>
+<div class="table-wrap"><table><thead><tr><th>能做</th><th>不能做</th></tr></thead><tbody><tr><td>看市场整体PE，判断风险温度</td><td>用市场PE直接决定清仓</td></tr><tr><td>看上涨/下跌家数比，判断市场广度</td><td>用指数涨跌解释个股对错</td></tr><tr><td>看利率、油价、汇率对行业利润的影响</td><td>用宏观新闻替代公司研究</td></tr><tr><td>看周期行业供需、库存、价格</td><td>把所有股票都当宏观交易</td></tr></tbody></table></div>
+<p>林奇式宏观分析的标准是：<strong>能否落到收入、成本、需求、估值、融资、库存这些公司变量上。</strong></p>
+<h3 id="11.3-困境反转型怎么提高确定性-持续下跌时先等待吗">11.3 困境反转型怎么提高确定性？持续下跌时先等待吗？</h3>
+<p>困境反转要分三种状态：</p>
+<div class="table-wrap"><table><thead><tr><th>状态</th><th>特征</th><th>动作</th></tr></thead><tbody><tr><td>只是跌得多</td><td>没有债务改善、没有亏损源处理、没有主业恢复</td><td>继续观察，不买</td></tr><tr><td>生存已大概率确定</td><td>现金足够，短债压力可控，有资产可卖，债权人不逼债</td><td>可以进入深度研究</td></tr><tr><td>反转事实已经出现</td><td>成本下降、亏损业务剥离、订单/客户恢复、债务下降</td><td>才进入买入区间</td></tr></tbody></table></div>
+<p>持续下跌时不是机械等待，也不是越跌越买，而是盯三类事实：</p>
+<ol><li><strong>生存事实：</strong> 现金、债务期限、债权人压力。</li><li><strong>修复事实：</strong> 成本削减、亏损源剥离、主业恢复。</li><li><strong>股东事实：</strong> 是否增发、资产是否被贱卖、债务是否侵蚀普通股。</li></ol>
+<p>如果这三类事实没有改善，股价再低也只是更便宜的危险。</p>
+<h2 id="12.-最终可执行模板">12. 最终可执行模板</h2>
+<h3 id="12.1-买入前清单">12.1 买入前清单</h3>
+<ol><li>我是否能用一句话解释公司业务？</li><li>我是否知道它属于六类中的哪一类？</li><li>我是否知道它靠什么提高收益？</li><li>我是否知道产品/服务对总利润的影响？</li><li>PE与增长率是否匹配？</li><li>现金和债务是否安全？</li><li>存货是否异常？</li><li>公司是否回购，内部人士是否买入？</li><li>机构持股和分析师关注是否已经过热？</li><li>它是否落入林奇的避开清单？</li><li>我是否知道买入后跟踪哪些指标？</li><li>我是否知道什么情况下卖出？</li><li>我能否完成两分钟投资故事？</li></ol>
+<h3 id="12.2-持有中清单">12.2 持有中清单</h3>
+<ol><li>投资故事是否仍成立？</li><li>公司类型是否改变？</li><li>收益增长是否延续？</li><li>估值是否已经高过合理范围？</li><li>债务是否上升？</li><li>存货是否过快增长？</li><li>现金是否被浪费在多元化收购上？</li><li>扩张是否仍能复制？</li><li>竞争是否变激烈？</li><li>是否出现更好的机会？</li></ol>
+<h3 id="12.3-卖出前清单">12.3 卖出前清单</h3>
+<ol><li>我卖出是因为基本面，还是因为股价？</li><li>买入理由是否已经失效？</li><li>是否只是受到市场噪音影响？</li><li>如果股价再跌25%，我愿不愿意加仓？</li><li>如果不愿意加仓，为什么还持有？</li><li>卖出后资金要去哪里？</li><li>新机会是否比原持仓更好？</li></ol>
+<h3 id="12.4-四个月上手计划">12.4 四个月上手计划</h3>
+<div class="table-wrap"><table><thead><tr><th>月份</th><th>任务</th><th>具体行动</th></tr></thead><tbody><tr><td>第1月</td><td>准备</td><td>完成投资前提自测；建立10家公司观察清单；不买股票</td></tr><tr><td>第2月</td><td>研究</td><td>给10家公司分类；每家公司写两分钟故事；查年报计算净现金和PE</td></tr><tr><td>第3月</td><td>精选</td><td>用13条正面线索筛选；用6类排除对象淘汰；选出1-3家深研</td></tr><tr><td>第4月</td><td>行动</td><td>小仓位买入；记录买入理由；设定复查日历</td></tr><tr><td>持续</td><td>循环</td><td>每季度复查；故事破裂时卖出；卖出的钱回到发现阶段</td></tr></tbody></table></div>
+<h2 id="13.-全书最重要的14个见解">13. 全书最重要的14个见解</h2>
+<ol><li>业余优势不是比机构聪明，而是有机会更早看到真实经营变化。</li><li>常识不是拍脑袋，而是到真实世界观察，再用简单数字验证。</li><li>产品好、公司好、股票好，是三件不同的事。</li><li>六种公司类型不是标签，而是问题生成器。</li><li>十倍股多来自第二阶段复制扩张，不是第一阶段纯想象。</li><li>低增长行业中的增长公司，常比热门行业中的热门公司更好。</li><li>困境反转的核心不是跌幅，而是生存时间。</li><li>周期股最危险的时刻，经常是PE看起来最低的时候。</li><li>资产价值只有扣掉债务、流动性和管理层行为后才算数。</li><li>估值不是公式，而是对故事的压力测试。</li><li>买入和卖出是同一件事：买入写故事，卖出查故事。</li><li>宏观不是不用，而是必须翻译成公司变量。</li><li>组合管理的核心是让正确继续正确，不要拔掉鲜花浇灌野草。</li><li>心理防线不是鸡汤，而是防止系统被情绪覆盖。</li></ol>
+<h2 id="14.-来源追溯索引">14. 来源追溯索引</h2>
+<p>这一节只用于回查原书，不作为阅读主线。</p>
+<div class="table-wrap"><table><thead><tr><th>原书位置</th><th>原书主题</th><th>本文对应位置</th></tr></thead><tbody><tr><td>导论</td><td>业余投资者优势</td><td>第1-2章</td></tr><tr><td>第1-5章</td><td>投资准备、不要预测市场</td><td>第1章、第10章</td></tr><tr><td>第6章</td><td>寻找10倍股</td><td>第2章</td></tr><tr><td>第7章</td><td>六种公司类型</td><td>第3章</td></tr><tr><td>第8章</td><td>13条选股准则</td><td>第4章</td></tr><tr><td>第9章</td><td>避而不买的股票</td><td>第4章</td></tr><tr><td>第10章</td><td>收益、市盈率</td><td>第5章</td></tr><tr><td>第11章</td><td>两分钟故事</td><td>第7章</td></tr><tr><td>第12章</td><td>获得真实公司信息</td><td>第6章</td></tr><tr><td>第13章</td><td>财务分析指标</td><td>第5章</td></tr><tr><td>第14-15章</td><td>定期复查、分析要点</td><td>第8章</td></tr><tr><td>第16章</td><td>构建投资组合</td><td>第10章</td></tr><tr><td>第17章</td><td>买入卖出时机</td><td>第9章</td></tr><tr><td>第18章</td><td>12种危险说法</td><td>第10章</td></tr><tr><td>第19章</td><td>期权、期货、卖空</td><td>第10章</td></tr><tr><td>第20章</td><td>长期信念</td><td>第10章</td></tr></tbody></table></div>
+<h2 id="15.-最终一句话">15. 最终一句话</h2>
+<p><strong>林奇式投资不是买一个会上涨的代码，而是买一个你能理解、能验证、能持续复查，并且价格没有透支的企业故事。</strong></p></article>
+    </main>
+  </div>
+  <a class="backtop" href="#top">顶部</a>
+  <script>
+const links=[...document.querySelectorAll('.toc a[href^="#"]')];
+const targets=links.map(a=>document.querySelector(decodeURI(a.getAttribute('href')))).filter(Boolean);
+const byId=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+const observer=new IntersectionObserver(entries=>{
+  const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];
+  if(!visible)return;
+  links.forEach(a=>a.classList.remove('active'));
+  const link=byId.get(visible.target.id);
+  if(link){link.classList.add('active');const details=link.closest('details');if(details)details.open=true;}
+},{rootMargin:'-18% 0px -70% 0px',threshold:.01});
+targets.forEach(t=>observer.observe(t));
+</script>
+</body>
+</html>
