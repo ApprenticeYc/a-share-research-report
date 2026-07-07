@@ -5,4 +5,5 @@
 入口文件：
 
 - `index.html`：A股市场全面认知报告
+- `market-temperature.html`：A股市场温度报告
 - `lynch-methodology.html`：彼得林奇投研方法论 v3
