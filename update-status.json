@@ -1,18 +1,17 @@
 {
   "state": "published_data_ready",
   "market_trade_date": "2026-09-04",
-  "generated_at": "2026-09-07 02:25:09",
-  "prepared_at": "2026-09-07 02:34:35",
+  "generated_at": "2026-09-07 02:41:57",
+  "prepared_at": "2026-09-07 02:42:17",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 43,
+    "checks": 60,
     "errors": 0,
     "warnings": 2
   },
   "report_state": "degraded",
   "degradation_reasons": [
     "交易所股票名单存在接口失败，详见 snapshot_metadata.listing_metadata_failures",
-    "东方财富每日市场结构包含缓存或不可用模块",
     "数据质量门禁通过，但第二来源存在不可用警告"
   ]
 }
