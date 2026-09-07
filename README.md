@@ -1,9 +1,9 @@
-# A股市场全面认知报告
+# 量化分析系统 · 股票研究中心
 
-静态网页版本。数据来源、行情最新交易日和生成时间已写入页面正文。
+GitHub Pages 公开版入口。报告由主项目统一刷新，并在质量门禁通过后发布。
 
-入口文件：
-
-- `index.html`：A股市场全面认知报告
-- `market-temperature.html`：A股市场温度报告
-- `lynch-methodology.html`：彼得林奇投研方法论 v3
+- `index.html`：股票研究中心
+- `a-share-report.html`：A股市场全面认知报告
+- `market-temperature.html`：A股每日市场状态
+- `companies/600900-yangtze-power/index.html`：长江电力综合研究
+- `lynch-methodology.html`：彼得林奇投研方法论

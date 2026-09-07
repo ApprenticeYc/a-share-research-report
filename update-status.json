@@ -3,24 +3,23 @@
   "market_trade_date": "2026-09-04",
   "required_trade_date": "2026-09-04",
   "publication_freshness": {
-    "checked_at": "2026-09-07 03:46:11",
+    "checked_at": "2026-09-07 08:36:08",
     "required_trade_date": "2026-09-04",
     "sources": {
       "AkShare tool_trade_date_hist_sina": "2026-09-04",
       "东方财富交易日历": "2026-09-04"
     }
   },
-  "generated_at": "2026-09-07 03:45:10",
-  "prepared_at": "2026-09-07 03:46:11",
+  "generated_at": "2026-09-07 08:34:56",
+  "prepared_at": "2026-09-07 08:36:08",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 72,
+    "checks": 76,
     "errors": 0,
     "warnings": 2
   },
   "report_state": "degraded",
   "degradation_reasons": [
-    "东方财富每日市场结构包含缓存或不可用模块",
     "数据质量门禁通过，但第二来源存在不可用警告"
   ]
 }
