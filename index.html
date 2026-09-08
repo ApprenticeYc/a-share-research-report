@@ -3,175 +3,247 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="market-trade-date" content="2026-09-07">
-  <title>量化分析系统 · 股票研究中心</title>
+  <meta name="market-trade-date" content="2026-09-08">
+  <meta name="description" content="量化研究工作台：市场、财务排雷、个股、ETF、公告、版本、自动化与 R2 固收的统一入口。">
+  <title>量化分析系统 · 研究工作台</title>
   <style>
-    :root { --ink:#20252a; --muted:#66707a; --line:#dde2e6; --soft:#f5f7f8; --teal:#176b72; --teal-soft:#edf6f6; --gold:#9a681c; --green:#28734e; }
+    :root { --ink:#17211e; --muted:#66736e; --line:#dbe3df; --canvas:#edf1ed; --panel:#fff; --nav:#10231f; --teal:#087467; --green:#236d4c; --amber:#98630e; --red:#a23e37; --blue:#3e6290; --violet:#7053a0; --shadow:0 14px 34px rgba(24,47,40,.065); }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:#fff; font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font:13px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
     a { color:inherit; }
-    .shell { display:grid; grid-template-columns:224px minmax(0,1fr); min-height:100vh; }
-    aside { position:sticky; top:0; height:100vh; padding:30px 22px; border-right:1px solid var(--line); background:#f8f9fa; }
-    .brand { font-size:17px; font-weight:760; }
-    .brand-sub { margin-top:3px; color:var(--muted); font-size:12px; }
-    nav { margin-top:28px; }
-    nav a { display:block; padding:10px 0; border-bottom:1px solid #e7eaed; color:#454c54; text-decoration:none; }
-    nav a:hover { color:var(--teal); }
-    .side-status { position:absolute; left:22px; right:22px; bottom:26px; color:var(--muted); font-size:11px; }
-    .side-status strong { display:block; margin-top:3px; color:var(--ink); font-size:13px; }
-    main { min-width:0; width:100%; max-width:1440px; padding:38px 44px 72px; }
-    header { display:flex; align-items:flex-end; justify-content:space-between; gap:30px; padding-bottom:24px; border-bottom:1px solid var(--line); }
-    .eyebrow { margin-bottom:7px; color:var(--teal); font-size:12px; font-weight:750; text-transform:uppercase; }
-    h1 { margin:0; font-size:32px; line-height:1.2; letter-spacing:0; }
-    header p { max-width:720px; margin:8px 0 0; color:var(--muted); }
-    .as-of { min-width:168px; padding-left:18px; border-left:3px solid var(--teal); }
-    .as-of span { display:block; color:var(--muted); font-size:11px; }
-    .as-of strong { display:block; margin-top:3px; font-size:20px; font-variant-numeric:tabular-nums; }
-    .metrics { display:grid; grid-template-columns:repeat(4,minmax(130px,1fr)); margin:24px 0 4px; border:1px solid var(--line); }
-    .metric { min-height:88px; padding:15px 17px; border-right:1px solid var(--line); }
-    .metric:last-child { border-right:0; }
-    .metric strong { display:block; font-size:22px; line-height:1.3; font-variant-numeric:tabular-nums; }
-    .metric span { display:block; margin-top:5px; color:var(--muted); font-size:12px; }
-    section { padding:30px 0; border-bottom:1px solid var(--line); }
-    section:last-of-type { border-bottom:0; }
-    .section-head { display:flex; align-items:flex-end; justify-content:space-between; gap:22px; margin-bottom:12px; }
-    h2 { margin:0; font-size:21px; letter-spacing:0; }
-    .section-head p { margin:0; color:var(--muted); font-size:13px; text-align:right; }
-    .report-list { border-top:1px solid var(--line); }
-    .report-row { display:grid; grid-template-columns:54px minmax(0,1fr) 126px 24px; gap:14px; align-items:center; min-height:78px; padding:13px 6px; border-bottom:1px solid #e9edf0; text-decoration:none; }
-    .report-row:hover { background:var(--teal-soft); }
-    .report-kind { width:42px; padding:3px 0; border:1px solid #9bbfc2; color:var(--teal); font-size:11px; font-weight:700; text-align:center; }
-    .report-copy { min-width:0; }
-    .report-copy strong { display:block; font-size:16px; }
-    .report-copy small { display:block; margin-top:3px; color:var(--muted); font-size:12px; }
-    time { color:var(--muted); font-size:11px; white-space:nowrap; font-variant-numeric:tabular-nums; }
-    .arrow { color:var(--teal); font-size:20px; text-align:right; }
-    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
-    .workflow { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--line); }
-    .workflow div { min-height:116px; padding:16px; border-right:1px solid var(--line); }
-    .workflow div:last-child { border-right:0; }
-    .workflow b { display:block; margin-bottom:7px; color:var(--teal); font-size:12px; }
-    .workflow strong { display:block; margin-bottom:4px; }
-    .workflow p { margin:0; color:var(--muted); font-size:12px; }
-    .source-note { margin-top:16px; padding:12px 14px; border-left:3px solid var(--gold); background:var(--soft); color:#505963; font-size:12px; }
-    footer { padding-top:30px; color:var(--muted); font-size:11px; }
-    @media(max-width:900px) {
-      .shell { grid-template-columns:1fr; }
-      aside { position:static; height:auto; padding:20px 18px; border-right:0; border-bottom:1px solid var(--line); }
-      nav { display:flex; gap:18px; margin-top:14px; overflow-x:auto; }
-      nav a { flex:0 0 auto; padding:5px 0; border:0; }
-      .side-status { display:none; }
-      main { padding:28px 18px 52px; }
-      header { align-items:flex-start; }
-      .metrics { grid-template-columns:1fr 1fr; }
-      .metric:nth-child(2) { border-right:0; }
-      .metric:nth-child(-n+2) { border-bottom:1px solid var(--line); }
-      .two-col { grid-template-columns:1fr; gap:0; }
-    }
-    @media(max-width:620px) {
-      header { display:block; }
-      h1 { font-size:28px; }
-      .as-of { margin-top:18px; }
-      .section-head { display:block; }
-      .section-head p { margin-top:5px; text-align:left; }
-      .report-row { grid-template-columns:46px minmax(0,1fr) 20px; gap:10px; }
-      .report-row time { grid-column:2; }
-      .arrow { grid-column:3; grid-row:1 / span 2; }
-      .workflow { grid-template-columns:1fr; }
-      .workflow div { min-height:0; border-right:0; border-bottom:1px solid var(--line); }
-      .workflow div:last-child { border-bottom:0; }
-    }
+    .shell { display:grid; grid-template-columns:238px minmax(0,1fr); min-height:100vh; }
+    aside { position:sticky; top:0; z-index:4; height:100vh; padding:25px 18px; background:var(--nav); color:#f2f7f5; }
+    .brand-lockup { display:flex; align-items:center; gap:11px; padding:0 5px 22px; border-bottom:1px solid rgba(255,255,255,.1); }
+    .brand-mark { display:grid; place-items:center; width:34px; height:34px; border:1px solid rgba(255,255,255,.34); border-radius:9px; color:#a8e1d3; font-size:12px; font-weight:800; letter-spacing:.08em; }
+    .brand { font-size:15px; font-weight:730; }
+    .brand-sub { margin-top:1px; color:#8fa49d; font-size:9px; letter-spacing:.12em; }
+    .nav-label { margin:22px 5px 7px; color:#6d857d; font-size:9px; font-weight:760; letter-spacing:.15em; }
+    nav a { display:flex; justify-content:space-between; margin:2px 0; padding:8px 10px; border-radius:7px; color:#c2d0cc; font-size:12px; text-decoration:none; }
+    nav a::after { content:'›'; color:#5e756e; }
+    nav a:hover { color:#fff; background:rgba(255,255,255,.07); }
+    .side-note { position:absolute; right:23px; bottom:24px; left:23px; color:#789087; font-size:10px; line-height:1.65; }
+    main { min-width:0; width:100%; max-width:1660px; padding:28px 34px 72px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:26px; padding-bottom:20px; border-bottom:1px solid var(--line); }
+    .eyebrow { margin-bottom:4px; color:var(--teal); font-size:9px; font-weight:800; letter-spacing:.17em; }
+    h1 { margin:0; font-size:27px; line-height:1.2; letter-spacing:-.025em; }
+    header p { max-width:720px; margin:5px 0 0; color:var(--muted); font-size:12px; }
+    .header-tools { display:flex; align-items:center; gap:12px; }
+    .search { display:flex; align-items:center; gap:8px; width:300px; height:38px; padding:0 12px; border:1px solid var(--line); border-radius:8px; background:#fff; box-shadow:0 5px 15px rgba(25,48,41,.035); }
+    .search span { color:#78837f; font-size:18px; }
+    .search input { width:100%; border:0; outline:0; background:transparent; color:var(--ink); font:inherit; }
+    .system-pill { min-width:118px; text-align:right; }
+    .system-pill time { display:block; margin-top:4px; color:var(--muted); font-size:9px; }
+    .summary { display:grid; grid-template-columns:repeat(5,minmax(110px,1fr)); margin-top:22px; border-radius:10px; background:#fff; box-shadow:var(--shadow); overflow:hidden; }
+    .summary div { min-height:67px; padding:12px 15px; border-right:1px solid var(--line); }
+    .summary div:last-child { border:0; }
+    .summary strong { display:block; font-size:18px; font-variant-numeric:tabular-nums; }
+    .summary span { display:block; margin-top:2px; color:var(--muted); font-size:10px; }
+    section { padding:26px 0 29px; border-bottom:1px solid var(--line); scroll-margin-top:16px; }
+    .section-head { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:14px; }
+    .section-kicker { display:block; margin-bottom:3px; color:var(--teal); font-size:9px; font-weight:800; letter-spacing:.14em; }
+    h2 { margin:0; font-size:19px; }
+    .section-head p { margin:2px 0 0; color:var(--muted); font-size:12px; }
+    .legend { display:flex; gap:6px; }
+    .badge { display:inline-block; padding:2px 6px; border:1px solid; border-radius:4px; font-size:9px; white-space:nowrap; }
+    .badge.ready { color:var(--green); border-color:#99c3aa; background:#f2f9f4; }
+    .badge.partial,.badge.warning,.badge.snapshot { color:var(--amber); border-color:#d7bd8b; background:#fff9ee; }
+    .badge.planned { color:var(--blue); border-color:#a9bfd1; background:#f3f7fb; }
+    .badge.danger { color:var(--red); border-color:#d6a29e; background:#fff6f5; }
+    .module-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:11px; }
+    .module-card { --accent:var(--teal); display:flex; flex-direction:column; min-width:0; min-height:192px; padding:14px; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:9px; background:var(--panel); box-shadow:0 8px 24px rgba(25,48,41,.045); transition:transform .16s ease,box-shadow .16s ease; }
+    .module-card:hover { transform:translateY(-2px); box-shadow:0 15px 30px rgba(25,48,41,.085); }
+    .accent-teal { --accent:var(--teal); } .accent-amber { --accent:#c08318; } .accent-blue { --accent:var(--blue); } .accent-violet { --accent:var(--violet); } .accent-red { --accent:var(--red); } .accent-slate { --accent:#667670; } .accent-green { --accent:var(--green); }
+    .module-code { display:flex; justify-content:space-between; color:var(--muted); font-size:9px; letter-spacing:.08em; }
+    .module-code b { color:var(--accent); }
+    .module-badges { display:flex; flex-wrap:wrap; gap:5px; margin:10px 0 9px; }
+    .module-card h3 { margin:0 0 5px; font-size:14px; }
+    .module-card p { display:-webkit-box; overflow:hidden; margin:0; color:#5c6864; font-size:11px; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
+    .module-bottom { margin-top:auto; padding-top:10px; border-top:1px solid #edf1ef; }
+    .module-bottom small { display:block; overflow:hidden; margin-bottom:8px; color:var(--muted); font-size:9px; text-overflow:ellipsis; white-space:nowrap; }
+    .module-actions { display:flex; flex-wrap:wrap; gap:5px 10px; }
+    .module-action { color:var(--teal); font-size:10px; font-weight:720; text-decoration:none; }
+    .module-action span { margin-left:3px; }
+    .module-action.muted { color:#526a64; }
+    .module-action.disabled { color:#9aa39f; font-weight:600; cursor:default; }
+    .two-col { display:grid; grid-template-columns:1.08fr .92fr; gap:16px; }
+    .panel { padding:16px; border:1px solid var(--line); border-radius:9px; background:#fff; box-shadow:0 8px 22px rgba(25,48,41,.035); }
+    .panel h3 { margin:0 0 8px; font-size:14px; }
+    .status-list { border:1px solid var(--line); border-radius:9px; background:#fff; overflow:hidden; }
+    .status-row { display:grid; grid-template-columns:8px minmax(0,1fr) auto; align-items:center; gap:12px; padding:12px 14px; border-bottom:1px solid #edf1ef; }
+    .status-row:last-child { border:0; }
+    .dot { width:7px; height:7px; border-radius:50%; background:var(--amber); } .dot.red { background:var(--red); } .dot.green { background:var(--green); }
+    .status-row strong { display:block; font-size:11px; } .status-row small { color:var(--muted); font-size:10px; } .status-row time { color:var(--muted); font-size:9px; }
+    .report-list { border:1px solid var(--line); border-radius:9px; background:#fff; overflow:hidden; }
+    .report-row { display:grid; grid-template-columns:48px minmax(0,1fr) 112px 20px; gap:12px; align-items:center; min-height:69px; padding:11px 12px; border-bottom:1px solid #edf1ef; text-decoration:none; }
+    .report-row:last-child { border:0; } .report-row:hover { background:#f3f8f6; }
+    .report-kind { width:40px; padding:2px 0; border:1px solid #9abfba; border-radius:4px; color:var(--teal); font-size:9px; font-weight:750; text-align:center; }
+    .report-copy strong { display:block; font-size:12px; } .report-copy small { display:block; margin-top:2px; color:var(--muted); font-size:10px; }
+    .report-row time { color:var(--muted); font-size:9px; white-space:nowrap; } .arrow { color:var(--teal); font-size:16px; }
+    .boundary { margin-top:12px; padding:11px 13px; border-left:3px solid var(--teal); background:#e8f3f0; color:#4b5b56; font-size:10px; }
+    footer { padding-top:26px; color:#7b8883; font-size:10px; }
+    [hidden] { display:none !important; }
+    @media(max-width:1380px) { .module-grid { grid-template-columns:repeat(3,1fr); } }
+    @media(max-width:1040px) { .module-grid { grid-template-columns:repeat(2,1fr); } .header-tools { align-items:flex-end; flex-direction:column; } .summary { grid-template-columns:repeat(3,1fr); } }
+    @media(max-width:760px) { .shell { display:block; } aside { position:static; height:auto; padding:16px; } .brand-lockup { padding-bottom:13px; } .nav-label { display:none; } nav { display:flex; gap:6px; margin-top:10px; overflow:auto; } nav a { flex:0 0 auto; padding:6px 8px; background:rgba(255,255,255,.05); } nav a::after,.side-note { display:none; } main { padding:20px 13px 48px; } header { align-items:flex-start; flex-direction:column; } .header-tools,.search { width:100%; } .system-pill { text-align:left; } .summary,.module-grid,.two-col { grid-template-columns:1fr; } .summary div { border-right:0; border-bottom:1px solid var(--line); } .section-head { align-items:flex-start; flex-direction:column; } .report-row { grid-template-columns:44px minmax(0,1fr) 18px; } .report-row time { grid-column:2; } .arrow { grid-column:3; grid-row:1 / span 2; } }
   </style>
 </head>
 <body>
 <div class="shell">
   <aside>
-    <div class="brand">量化分析系统</div>
-    <div class="brand-sub">公开研究站</div>
-    <nav aria-label="页面导航">
-      <a href="#daily">每日状态</a>
-      <a href="#market">市场研究</a>
-      <a href="#company">公司研究</a>
-      <a href="#method">分析方法</a>
-      <a href="#workflow">研究流程</a>
-    </nav>
-    <div class="side-status">当前行情数据<strong>2026-09-07</strong></div>
+    <div class="brand-lockup"><div class="brand-mark">QR</div><div><div class="brand">量化研究系统</div><div class="brand-sub">EVIDENCE · VERSION · DECISION</div></div></div>
+    <div class="nav-label">工作台</div>
+    <nav aria-label="工作台导航"><a href="#overview">全部入口</a><a href="#today">今日状态</a><a href="#reports">公开研究</a></nav>
+    <div class="nav-label">研究资产</div>
+    <nav aria-label="研究资产导航"><a href="#overview">公司与 ETF</a><a href="#overview">版本与自动化</a><a href="#overview">R2 固收</a></nav>
+    <div class="side-note">公开工作台 · 敏感字段脱敏<br>市场数据截至 2026-09-08</div>
   </aside>
   <main>
     <header>
-      <div>
-        <div class="eyebrow">Stock Research Center</div>
-        <h1>股票研究中心</h1>
-        <p>把每日市场状态、长期市场认知、公司基本面与投资方法放在同一个入口中，所有公开页面按统一数据口径持续更新。</p>
-      </div>
-      <div class="as-of"><span>最新完整交易日</span><strong>2026-09-07</strong></div>
+      <div><div class="eyebrow">RESEARCH OPERATING SYSTEM</div><h1>量化研究工作台</h1><p>从全市场扫描进入公司与 ETF 深研，证据、结论和每次变化都可回溯。</p></div>
+      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 3 项待处理</span><time>更新 2026-09-09 05:50:58</time></div></div>
     </header>
 
-    <div class="metrics" aria-label="数据摘要">
-      <div class="metric"><strong>5,557</strong><span>全A公司样本</span></div>
-      <div class="metric"><strong>285</strong><span>宽基ETF样本</span></div>
-      <div class="metric"><strong>99.6%</strong><span>当日ETF可计算覆盖</span></div>
-      <div class="metric"><strong>每日</strong><span>收盘后刷新并校验</span></div>
+    <div class="summary" aria-label="研究数据摘要">
+      <div><strong>2026-09-08</strong><span>A 股最新交易日</span></div>
+      <div><strong>5,557</strong><span>全 A 市场样本</span></div>
+      <div><strong>2026-03-31</strong><span>财务排雷报告期</span></div>
+      <div><strong>175</strong><span>公司与 ETF 研究版本</span></div>
+      <div><strong>3</strong><span>当前明确待处理项</span></div>
     </div>
 
-    <section id="daily">
-      <div class="section-head"><h2>每日状态</h2><p>先判断市场环境，再进入具体标的</p></div>
+    <section id="overview">
+      <div class="section-head"><div><span class="section-kicker">ALL CAPABILITIES</span><h2>全部功能入口</h2><p>十项能力一次看全；产品成熟度与本次运行状态分开展示。</p></div><div class="legend"><span class="badge ready">已实现</span><span class="badge partial">部分实现</span><span class="badge planned">开发中</span></div></div>
+      <div class="module-grid">
+        <article class="module-card accent-teal" data-search-item>
+          <div class="module-code"><span>01</span><b>MARKET</b></div>
+          <div class="module-badges"><span class="badge ready">已实现</span><span class="badge warning">降级可用</span></div>
+          <h3>全市场每日情况</h3>
+          <p>全 A 截面、成交、广度、估值、宽基趋势、ETF 资金与融资杠杆。</p>
+          <div class="module-bottom"><small>数据日 2026-09-08 · 5,557 家</small><div class="module-actions"><a class="module-action" href="market-temperature.html">打开每日市场<span aria-hidden="true">→</span></a><a class="module-action muted" href="a-share-report.html">长期市场框架<span aria-hidden="true">→</span></a></div></div>
+        </article>
+        <article class="module-card accent-amber" data-search-item>
+          <div class="module-code"><span>02</span><b>RISK</b></div>
+          <div class="module-badges"><span class="badge ready">已实现</span><span class="badge snapshot">披露期快照</span></div>
+          <h3>全市场财务排雷</h3>
+          <p>按三表、现金流与五季度趋势发现财务异常，再进入公司复核。</p>
+          <div class="module-bottom"><small>5,529 家 · 报告期 2026-03-31</small><div class="module-actions"><span class="module-action disabled">公开页面接入中</span></div></div>
+        </article>
+        <article class="module-card accent-blue" data-search-item>
+          <div class="module-code"><span>03</span><b>COMPANY</b></div>
+          <div class="module-badges"><span class="badge partial">部分实现</span><span class="badge warning">18/19 已分析</span></div>
+          <h3>个股综合分析</h3>
+          <p>把财报、公告、业务、估值与双框架研究合并为可回溯结论。</p>
+          <div class="module-bottom"><small>137 个公司分析版本 · 当前公开 2 家</small><div class="module-actions"><a class="module-action" href="companies/600900-yangtze-power/index.html">长江电力<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09888-baidu/index.html">百度集团<span aria-hidden="true">→</span></a></div></div>
+        </article>
+        <article class="module-card accent-violet" data-search-item>
+          <div class="module-code"><span>04</span><b>ETF</b></div>
+          <div class="module-badges"><span class="badge partial">部分实现</span><span class="badge warning">成分回填中</span></div>
+          <h3>ETF 全市场分析</h3>
+          <p>全市场目录、宽基价格与资金、成分公司穿透，以及每日研究版本。</p>
+          <div class="module-bottom"><small>确认 1,564 / 候选 1,638 · 成分 1/1638</small><div class="module-actions"><a class="module-action" href="market-temperature.html#broadEtfFlowChart">宽基资金<span aria-hidden="true">→</span></a><a class="module-action muted" href="market-temperature.html#etfPriceChart">代表 ETF 价格<span aria-hidden="true">→</span></a></div></div>
+        </article>
+        <article class="module-card accent-red" data-search-item>
+          <div class="module-code"><span>05</span><b>DISCLOSURE</b></div>
+          <div class="module-badges"><span class="badge partial">部分实现</span><span class="badge danger">有失败待重试</span></div>
+          <h3>巨潮与披露更新</h3>
+          <p>持续接入财报与公告，判断新证据是否改变公司盈利、估值或风险假设。</p>
+          <div class="module-bottom"><small>最近新增 24 份 · 失败关键词 1</small><div class="module-actions"><span class="module-action disabled">公开增量页接入中</span></div></div>
+        </article>
+        <article class="module-card accent-slate" data-search-item>
+          <div class="module-code"><span>06</span><b>MACRO</b></div>
+          <div class="module-badges"><span class="badge planned">建设中</span><span class="badge warning">已有市场输入</span></div>
+          <h3>宏观分析</h3>
+          <p>连接市场周期与财经信息；结构化指标库、经济日历和固定报告继续建设。</p>
+          <div class="module-bottom"><small>当前承接 A 股周期与财经信息</small><div class="module-actions"><a class="module-action" href="a-share-report.html">查看市场框架<span aria-hidden="true">→</span></a></div></div>
+        </article>
+        <article class="module-card accent-green" data-search-item>
+          <div class="module-code"><span>07</span><b>PLAYBOOK</b></div>
+          <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">可用</span></div>
+          <h3>个股方法与投资体系</h3>
+          <p>融合林奇公司分类、财务核验、YC 综合研究与长期资本配置纪律。</p>
+          <div class="module-bottom"><small>4 套研究框架</small><div class="module-actions"><a class="module-action" href="lynch-methodology.html">打开林奇方法论<span aria-hidden="true">→</span></a></div></div>
+        </article>
+        <article class="module-card accent-blue" data-search-item>
+          <div class="module-code"><span>08</span><b>HISTORY</b></div>
+          <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">可回溯</span></div>
+          <h3>研究版本与回溯</h3>
+          <p>公司和 ETF 按内容生成不可变版本，保留父子关系与证据时间线。</p>
+          <div class="module-bottom"><small>公司 137 + ETF 38 = 175 个版本</small><div class="module-actions"><span class="module-action disabled">公开版本页接入中</span></div></div>
+        </article>
+        <article class="module-card accent-green" data-search-item>
+          <div class="module-code"><span>09</span><b>AUTOMATION</b></div>
+          <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">3/3 已启用</span></div>
+          <h3>自动化与质量门禁</h3>
+          <p>每日刷新、公告轮询、财经增量和发布前质量检查分别记录结果。</p>
+          <div class="module-bottom"><small>质量门禁 0 错误 / 2 警告</small><div class="module-actions"><a class="module-action" href="update-status.json">查看公开状态<span aria-hidden="true">→</span></a></div></div>
+        </article>
+        <article class="module-card accent-violet" data-search-item>
+          <div class="module-code"><span>10</span><b>R2</b></div>
+          <div class="module-badges"><span class="badge planned">开发中</span><span class="badge warning">独立研发</span></div>
+          <h3>R2 固定收益研究</h3>
+          <p>债券研究与挖掘模块；入口已预留，由独立研发任务持续建设。</p>
+          <div class="module-bottom"><small>Beta 槽位 · 暂不展示内部研究数据</small><div class="module-actions"><span class="module-action disabled">开发中</span></div></div>
+        </article></div>
+    </section>
+
+    <section id="today">
+      <div class="section-head"><div><span class="section-kicker">TODAY</span><h2>今日运行状态</h2><p>失败、降级和待更新不会被汇总成一个笼统的“成功”。</p></div></div>
+      <div class="two-col">
+        <div class="status-list">
+          <div class="status-row"><span class="dot "></span><div><strong>A 股每日主链</strong><small>0 个错误 / 2 个警告 · 降级可用</small></div><time>2026-09-08</time></div>
+          <div class="status-row"><span class="dot red"></span><div><strong>巨潮公告更新</strong><small>新增 24 份 · 1 个关键词失败待重试</small></div><time>2026-09-08</time></div>
+          <div class="status-row"><span class="dot green"></span><div><strong>公司证据同步</strong><small>0 家公司有新证据待补入研究版本</small></div><time>持续检查</time></div>
+        </div>
+        <div class="panel"><h3>当前覆盖边界</h3><div class="boundary">ETF 全市场：交易所确认 1,564 只、候选目录 1,638 只；通用成分穿透管线已接入，当前真实成分覆盖 1/1638。R2 作为独立开发中的 Beta 模块，只展示入口和产品状态。</div></div>
+      </div>
+    </section>
+
+    <section id="reports">
+      <div class="section-head"><div><span class="section-kicker">PUBLIC RESEARCH</span><h2>当前公开研究</h2><p>入口先只连接已完成隐私检查的页面，后续功能页按相同门禁逐步接入。</p></div></div>
       <div class="report-list">
       <a class="report-row" href="market-temperature.html">
         <span class="report-kind">每日</span>
-        <span class="report-copy"><strong>A股每日市场状态</strong><small>成交额温度、涨跌分布、宽基走势、ETF资金与融资杠杆</small></span>
-        <time>2026-09-08 01:51</time>
+        <span class="report-copy"><strong>A股每日市场状态</strong><small>成交额、涨跌分布、宽基、ETF资金和融资杠杆</small></span>
+        <time>2026-09-09 05:50</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
-      </a></div>
-    </section>
-
-    <section id="market">
-      <div class="section-head"><h2>市场研究</h2><p>长期框架与每日状态分开，避免重复</p></div>
-      <div class="report-list">
+      </a>
       <a class="report-row" href="a-share-report.html">
         <span class="report-kind">长期</span>
-        <span class="report-copy"><strong>A股市场全面认知报告</strong><small>市场规模、结构、周期、轮动及宽基ETF买卖框架</small></span>
-        <time>2026-09-07 23:23</time>
+        <span class="report-copy"><strong>A股市场全面认知报告</strong><small>市场规模、结构、周期、估值和宽基框架</small></span>
+        <time>2026-09-09 05:26</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
-      </a></div>
-    </section>
-
-    <div class="two-col">
-      <section id="company">
-        <div class="section-head"><h2>公司研究</h2><p>基本面、估值与现金流</p></div>
-        <div class="report-list">
+      </a>
       <a class="report-row" href="companies/600900-yangtze-power/index.html">
         <span class="report-kind">公司</span>
-        <span class="report-copy"><strong>长江电力综合研究</strong><small>基本面趋势、估值分位、资本开支、现金流与决策变量</small></span>
-        <time>2026-09-07 02:08</time>
+        <span class="report-copy"><strong>长江电力综合研究</strong><small>业务、财务、现金流、估值与关键风险</small></span>
+        <time>2026-09-08 23:14</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
-      </a></div>
-      </section>
-      <section id="method">
-        <div class="section-head"><h2>分析方法</h2><p>方法服务于研究判断</p></div>
-        <div class="report-list">
+      </a>
+      <a class="report-row" href="companies/09888-baidu/index.html">
+        <span class="report-kind">公司</span>
+        <span class="report-copy"><strong>百度集团综合研究</strong><small>五季度财务、AI 业务、现金流、估值与关键风险</small></span>
+        <time>2026-09-09 05:17</time>
+        <span class="arrow" aria-hidden="true">&#8594;</span>
+      </a>
       <a class="report-row" href="lynch-methodology.html">
         <span class="report-kind">方法</span>
-        <span class="report-copy"><strong>彼得林奇投研方法论</strong><small>公司分类、投资故事、估值约束与持有卖出条件</small></span>
+        <span class="report-copy"><strong>彼得林奇投研方法论</strong><small>公司分类、投资故事、估值约束与退出条件</small></span>
         <time>2026-06-21 23:34</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a></div>
-      </section>
-    </div>
-
-    <section id="workflow">
-      <div class="section-head"><h2>研究流程</h2><p>低频、可复核、以事实为先</p></div>
-      <div class="workflow">
-        <div><b>01</b><strong>先看市场</strong><p>观察成交额、宽基趋势、资金与情绪所处阶段。</p></div>
-        <div><b>02</b><strong>再看公司</strong><p>核对业务、三表、现金流、估值与关键风险。</p></div>
-        <div><b>03</b><strong>最后决策</strong><p>用仓位和买卖纪律控制周期波动，不追逐短期刺激。</p></div>
-      </div>
-      <div class="source-note">数据以 AkShare 及其公开行情源为主，并使用交易日历、交易所资料和独立质量门禁交叉检查。公开页面只有在关键校验通过后才会发布。</div>
     </section>
 
-    <footer>页面生成时间 2026-09-08 01:51:50 · 作者 zili</footer>
+    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-09-09 05:50:58</footer>
   </main>
 </div>
+<script>
+  const search = document.getElementById('globalSearch');
+  const searchable = Array.from(document.querySelectorAll('[data-search-item], .report-row'));
+  search.addEventListener('input', () => {
+    const query = search.value.trim().toLowerCase();
+    searchable.forEach(item => { item.hidden = Boolean(query) && !item.textContent.toLowerCase().includes(query); });
+  });
+</script>
 </body>
 </html>
