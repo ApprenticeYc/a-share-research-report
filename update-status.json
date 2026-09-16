@@ -1,22 +1,22 @@
 {
   "state": "published_data_ready",
-  "market_trade_date": "2026-09-08",
-  "required_trade_date": "2026-09-08",
+  "market_trade_date": "2026-09-15",
+  "required_trade_date": "2026-09-15",
   "publication_freshness": {
-    "checked_at": "2026-09-09 06:08:43",
-    "required_trade_date": "2026-09-08",
+    "checked_at": "2026-09-16 11:47:52",
+    "required_trade_date": "2026-09-15",
     "sources": {
-      "AkShare tool_trade_date_hist_sina": "2026-09-08",
-      "东方财富交易日历": "2026-09-08"
+      "AkShare tool_trade_date_hist_sina": "2026-09-15",
+      "东方财富交易日历": "2026-09-15"
     }
   },
-  "generated_at": "2026-09-09 06:05:38",
-  "prepared_at": "2026-09-09 06:08:43",
+  "generated_at": "2026-09-16 11:47:29",
+  "prepared_at": "2026-09-16 11:47:52",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 80,
+    "checks": 104,
     "errors": 0,
-    "warnings": 3
+    "warnings": 2
   },
   "report_state": "degraded",
   "degradation_reasons": [
