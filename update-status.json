@@ -3,25 +3,25 @@
   "market_trade_date": "2026-09-18",
   "required_trade_date": "2026-09-18",
   "publication_freshness": {
-    "checked_at": "2026-09-18 23:38:25",
+    "checked_at": "2026-09-19 00:23:03",
     "required_trade_date": "2026-09-18",
     "sources": {
       "AkShare tool_trade_date_hist_sina": "2026-09-18",
       "东方财富交易日历": "2026-09-18"
     }
   },
-  "generated_at": "2026-09-18 23:36:51",
-  "prepared_at": "2026-09-18 23:38:25",
+  "generated_at": "2026-09-19 00:17:51",
+  "prepared_at": "2026-09-19 00:23:03",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 104,
+    "checks": 117,
     "errors": 0,
-    "warnings": 1
+    "warnings": 2
   },
   "report_state": "degraded",
   "degradation_reasons": [
     "交易所股票名单存在接口失败，详见 snapshot_metadata.listing_metadata_failures",
     "宽基ETF净申购估算包含缓存或历史回填不完整",
-    "数据质量门禁通过，但第二来源存在不可用警告"
+    "数据质量门禁通过，但仍有警告项，具体原因见质量检查明细"
   ]
 }
