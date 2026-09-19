@@ -3,18 +3,18 @@
   "market_trade_date": "2026-09-18",
   "required_trade_date": "2026-09-18",
   "publication_freshness": {
-    "checked_at": "2026-09-20 00:23:44",
+    "checked_at": "2026-09-20 04:11:40",
     "required_trade_date": "2026-09-18",
     "sources": {
       "AkShare tool_trade_date_hist_sina": "2026-09-18",
       "东方财富交易日历": "2026-09-18"
     }
   },
-  "generated_at": "2026-09-20 00:20:09",
-  "prepared_at": "2026-09-20 00:23:44",
+  "generated_at": "2026-09-20 04:05:54",
+  "prepared_at": "2026-09-20 04:11:40",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 121,
+    "checks": 160,
     "errors": 0,
     "warnings": 2
   },
