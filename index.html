@@ -96,13 +96,13 @@
     <div class="nav-label">工作台</div>
     <nav aria-label="工作台导航"><a href="#overview">全部入口</a><a href="#today">今日状态</a><a href="#reports">公开研究</a></nav>
     <div class="nav-label">研究资产</div>
-    <nav aria-label="研究资产导航"><a href="company-research.html">公司研究</a><a href="etf-research.html">ETF 穿透</a><a href="research-history.html">版本回溯</a><a href="system-status.html">自动化</a><span class="nav-disabled">R2 开发中</span></nav>
+    <nav aria-label="研究资产导航"><a href="company-research.html">公司研究</a><a href="etf-research.html">ETF 穿透</a><a href="bond-research.html">债基研究</a><a href="research-history.html">版本回溯</a><a href="system-status.html">自动化</a><span class="nav-disabled">R2 开发中</span></nav>
     <div class="side-note">公开工作台 · 敏感字段脱敏<br>市场数据截至 2026-09-18</div>
   </aside>
   <main>
     <header>
       <div><div class="eyebrow">RESEARCH OPERATING SYSTEM</div><h1>量化研究工作台</h1><p>从全市场扫描进入公司与 ETF 深研，证据、结论和每次变化都可回溯。</p></div>
-      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 18 项待处理</span><time>更新 2026-09-20 04:05:46</time></div></div>
+      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 18 项待处理</span><time>更新 2026-09-20 08:52:32</time></div></div>
     </header>
 
     <div class="summary" aria-label="研究数据摘要">
@@ -179,6 +179,13 @@
           <p>每日刷新、公告轮询、财经增量和发布前质量检查分别记录结果。</p>
           <div class="module-bottom"><small>质量门禁 0 错误 / 2 警告</small><div class="module-actions"><a class="module-action" href="system-status.html">查看系统状态<span aria-hidden="true">→</span></a></div></div>
         </article>
+        <article id="capability-bond" class="module-card accent-teal" data-capability="bond" data-search-item>
+          <div class="module-code"><span>11</span><b>BOND</b></div>
+          <div class="module-badges"><span class="badge partial">部分覆盖</span><span class="badge snapshot">公开研究快照</span></div>
+          <h3>债基与偏债混合研究</h3>
+          <p>五期限收益与回撤、报告底层资产、费用及独立核验；纯债与偏债混合分别比较。</p>
+          <div class="module-bottom"><small>数据与报告日期分列 · 证据不足保留待核</small><div class="module-actions"><a class="module-action" href="bond-research.html">打开债基研究<span aria-hidden="true">→</span></a></div></div>
+        </article>
         <article id="capability-r2" class="module-card accent-violet" data-capability="r2" data-search-item>
           <div class="module-code"><span>10</span><b>R2</b></div>
           <div class="module-badges"><span class="badge planned">开发中</span><span class="badge warning">独立研发</span></div>
@@ -218,13 +225,19 @@
       <a class="report-row" href="financial-risk.html">
         <span class="report-kind">排雷</span>
         <span class="report-copy"><strong>全市场财务排雷</strong><small>三表、现金流、审计意见与连续趋势</small></span>
-        <time>2026-09-20 04:05</time>
+        <time>2026-09-20 08:52</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="etf-research.html">
         <span class="report-kind">ETF</span>
         <span class="report-copy"><strong>ETF 全市场穿透研究</strong><small>公开季报、持有公司、业务分类与季度变化</small></span>
-        <time>2026-09-20 04:05</time>
+        <time>2026-09-20 08:52</time>
+        <span class="arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a class="report-row" href="bond-research.html">
+        <span class="report-kind">债基</span>
+        <span class="report-copy"><strong>债基与偏债混合研究</strong><small>收益、回撤、底层报告与核验缺口</small></span>
+        <time>2026-09-20 08:52</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="companies/600900-yangtze-power/index.html">
@@ -259,7 +272,7 @@
       </a></div>
     </section>
 
-    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-09-20 04:05:46</footer>
+    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-09-20 08:52:32</footer>
   </main>
 </div>
 <script>
