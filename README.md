@@ -16,4 +16,6 @@
 - `companies/09888-baidu/index.html`：百度集团综合研究
 - `companies/09618-jd/index.html`：京东集团综合研究
 - `companies/pdd-holdings/index.html`：PDD Holdings 综合研究
+- `companies/02015-li-auto/index.html`：理想汽车综合研究
+- `companies/09868-xpeng/index.html`：小鹏汽车综合研究
 - `lynch-methodology.html`：彼得林奇投研方法论
