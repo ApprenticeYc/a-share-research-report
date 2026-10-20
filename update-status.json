@@ -1,19 +1,19 @@
 {
   "schema": "a-share-public-status.v2",
-  "run_id": "a_share_20261021T010727_24586_f6f101bf",
+  "run_id": "a_share_20261021T011947_26815_baa9c3ca",
   "state": "published_data_ready",
   "market_trade_date": "2026-10-20",
   "required_trade_date": "2026-10-20",
   "publication_freshness": {
-    "checked_at": "2026-10-21 01:14:56",
+    "checked_at": "2026-10-21 01:27:43",
     "required_trade_date": "2026-10-20",
     "sources": {
       "AkShare tool_trade_date_hist_sina": "2026-10-20",
       "东方财富交易日历": "2026-10-20"
     }
   },
-  "generated_at": "2026-10-21 01:08:48",
-  "prepared_at": "2026-10-21 01:14:56",
+  "generated_at": "2026-10-21 01:21:03",
+  "prepared_at": "2026-10-21 01:27:43",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
     "checks": 397,
@@ -26,5 +26,5 @@
     "宽基ETF净申购估算包含缓存或历史回填不完整",
     "数据质量门禁通过，但仍有警告项，具体原因见质量检查明细"
   ],
-  "quality_report_sha256": "2757854e2292032806752e4688feabe970a27dc06d96628ed2181a99d1a38e64"
+  "quality_report_sha256": "9f873fd0ef27cbe8e5d124dca4bfa1e74912acdaf385afe95186be3618b6f021"
 }
