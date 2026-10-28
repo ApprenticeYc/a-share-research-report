@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="market-trade-date" content="2026-10-22">
+  <meta name="market-trade-date" content="2026-10-28">
   <meta name="description" content="量化研究工作台：市场、财务排雷、个股、ETF、公告、版本、自动化与 R2 固收的统一入口。">
   <title>量化分析系统 · 研究工作台</title>
   <style>
@@ -88,8 +88,9 @@
     @media(max-width:1040px) { .module-grid { grid-template-columns:repeat(2,1fr); } .header-tools { align-items:flex-end; flex-direction:column; } .summary { grid-template-columns:repeat(3,1fr); } }
     @media(max-width:760px) { .shell { display:block; } aside { position:static; height:auto; padding:16px; } .brand-lockup { padding-bottom:13px; } .nav-label { display:none; } nav { display:flex; gap:6px; margin-top:10px; overflow:auto; } nav a { flex:0 0 auto; padding:6px 8px; background:rgba(255,255,255,.05); } nav a::after,.side-note { display:none; } main { padding:20px 13px 48px; } header { align-items:flex-start; flex-direction:column; } .header-tools,.search { width:100%; } .system-pill { text-align:left; } .summary,.module-grid,.two-col { grid-template-columns:1fr; } .summary div { border-right:0; border-bottom:1px solid var(--line); } .section-head { align-items:flex-start; flex-direction:column; } .report-row { grid-template-columns:44px minmax(0,1fr) 18px; } .report-row time { grid-column:2; } .arrow { grid-column:3; grid-row:1 / span 2; } }
   </style>
+<meta name="publication-policy" content="latest_with_disclosed_gaps">
 </head>
-<body>
+<body><!-- A_SHARE_PUBLICATION_NOTES:START --><aside role="status" style="margin:18px;padding:18px;border:2px solid #b7791f;background:#fff8e6;color:#644000"><strong>数据更新与问题备注 · 2026-10-28</strong><ul><li>ETF历史缺口：价格40条、流量2条；缺失值保留为空。</li><li>美债专题正在独立研究与核验，本轮仅保留待发布入口，尚无已验收的美债分析结论。</li><li>GDP 2026-09：东方财富1071071.2亿元，国家统计局1071071.0亿元，差额+0.2亿元；官方整数披露精度相容；小数部分及差异原因未获官方确认</li></ul><p>行情日期与各模块数据日期分别展示；未完整数据不用于当日结论。</p></aside><!-- A_SHARE_PUBLICATION_NOTES:END -->
 <div class="shell">
   <aside>
     <div class="brand-lockup"><div class="brand-mark">QR</div><div><div class="brand">量化研究系统</div><div class="brand-sub">EVIDENCE · VERSION · DECISION</div></div></div>
@@ -97,20 +98,20 @@
     <nav aria-label="工作台导航"><a href="#overview">全部入口</a><a href="#today">今日状态</a><a href="#reports">公开研究</a></nav>
     <div class="nav-label">研究资产</div>
     <nav aria-label="研究资产导航"><a href="company-research.html">公司研究</a><a href="etf-research.html">ETF 穿透</a><a href="bond-research.html">债基研究</a><a href="research-history.html">版本回溯</a><a href="system-status.html">自动化</a><span class="nav-disabled">R2 开发中</span></nav>
-    <div class="side-note">公开工作台 · 敏感字段脱敏<br>市场数据截至 2026-10-22</div>
+    <div class="side-note">公开工作台 · 敏感字段脱敏<br>市场数据截至 2026-10-28</div>
   </aside>
   <main>
     <header>
       <div><div class="eyebrow">RESEARCH OPERATING SYSTEM</div><h1>量化研究工作台</h1><p>从全市场扫描进入公司与 ETF 深研，证据、结论和每次变化都可回溯。</p></div>
-      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 16 项待处理</span><time>更新 2026-10-22 23:43:44</time></div></div>
+      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 20 项待处理</span><time>更新 2026-10-29 02:05:40</time></div></div>
     </header>
 
     <div class="summary" aria-label="研究数据摘要">
-      <div><strong>2026-10-22</strong><span>A 股最新交易日</span></div>
-      <div><strong>5,577</strong><span>全 A 市场样本</span></div>
+      <div><strong>2026-10-28</strong><span>A 股最新交易日</span></div>
+      <div><strong>5,576</strong><span>全 A 市场样本</span></div>
       <div><strong>2026-06-30</strong><span>财务排雷报告期</span></div>
-      <div><strong>5204</strong><span>公司与 ETF 研究版本</span></div>
-      <div><strong>16</strong><span>当前明确待处理项</span></div>
+      <div><strong>5286</strong><span>公司与 ETF 研究版本</span></div>
+      <div><strong>20</strong><span>当前明确待处理项</span></div>
     </div>
 
     <section id="overview">
@@ -121,28 +122,28 @@
           <div class="module-badges"><span class="badge ready">已实现</span><span class="badge warning">降级可用</span></div>
           <h3>全市场每日情况</h3>
           <p>全 A 截面、成交、广度、估值、宽基趋势、ETF 资金与融资杠杆。</p>
-          <div class="module-bottom"><small>数据日 2026-10-22 · 5,577 家</small><div class="module-actions"><a class="module-action" href="market-temperature.html">打开每日市场<span aria-hidden="true">→</span></a><a class="module-action muted" href="a-share-report.html">长期市场框架<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>数据日 2026-10-28 · 5,576 家</small><div class="module-actions"><a class="module-action" href="market-temperature.html">打开每日市场<span aria-hidden="true">→</span></a><a class="module-action muted" href="a-share-report.html">长期市场框架<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-risk" class="module-card accent-amber" data-capability="risk" data-search-item>
           <div class="module-code"><span>02</span><b>RISK</b></div>
           <div class="module-badges"><span class="badge ready">已实现</span><span class="badge snapshot">披露期快照</span></div>
           <h3>全市场财务排雷</h3>
           <p>按三表、现金流与五季度趋势发现财务异常，再进入公司复核。</p>
-          <div class="module-bottom"><small>5,577 家 · 报告期 2026-06-30</small><div class="module-actions"><a class="module-action" href="financial-risk.html">打开财务排雷<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>5,576 家 · 报告期 2026-06-30</small><div class="module-actions"><a class="module-action" href="financial-risk.html">打开财务排雷<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-company" class="module-card accent-blue" data-capability="company" data-search-item>
           <div class="module-code"><span>03</span><b>COMPANY</b></div>
           <div class="module-badges"><span class="badge partial">部分实现</span><span class="badge warning">18/21 已分析</span></div>
           <h3>个股综合分析</h3>
           <p>把财报、公告、业务、估值与双框架研究合并为可回溯结论。</p>
-          <div class="module-bottom"><small>340 个公司分析版本 · 当前公开 6 家</small><div class="module-actions"><a class="module-action" href="company-research.html">打开公司研究库<span aria-hidden="true">→</span></a><a class="module-action" href="watchlist.html">六只关注股票<span aria-hidden="true">→</span></a><a class="module-action" href="companies/600900-yangtze-power/index.html">长江电力<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09888-baidu/index.html">百度集团<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09618-jd/index.html">京东集团<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/pdd-holdings/index.html">拼多多<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/02015-li-auto/index.html">理想汽车<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09868-xpeng/index.html">小鹏汽车<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>352 个公司分析版本 · 当前公开 6 家</small><div class="module-actions"><a class="module-action" href="company-research.html">打开公司研究库<span aria-hidden="true">→</span></a><a class="module-action" href="watchlist.html">六只关注股票<span aria-hidden="true">→</span></a><a class="module-action" href="companies/600900-yangtze-power/index.html">长江电力<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09888-baidu/index.html">百度集团<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09618-jd/index.html">京东集团<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/pdd-holdings/index.html">拼多多<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/02015-li-auto/index.html">理想汽车<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09868-xpeng/index.html">小鹏汽车<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-etf" class="module-card accent-violet" data-capability="etf" data-search-item>
           <div class="module-code"><span>04</span><b>ETF</b></div>
           <div class="module-badges"><span class="badge partial">部分实现</span><span class="badge warning">成分回填中</span></div>
           <h3>ETF 全市场分析</h3>
           <p>全市场目录、宽基价格与资金、成分公司穿透，以及每日研究版本。</p>
-          <div class="module-bottom"><small>确认 1,619 / 候选 1,688 · 成分 1471/1688</small><div class="module-actions"><a class="module-action" href="etf-research.html">打开 ETF 穿透<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>确认 1,620 / 候选 1,689 · 成分 1471/1689</small><div class="module-actions"><a class="module-action" href="etf-research.html">打开 ETF 穿透<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-disclosure" class="module-card accent-red" data-capability="disclosure" data-search-item>
           <div class="module-code"><span>05</span><b>DISCLOSURE</b></div>
@@ -170,14 +171,14 @@
           <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">可回溯</span></div>
           <h3>研究版本与回溯</h3>
           <p>公司和 ETF 按内容生成不可变版本，保留父子关系与证据时间线。</p>
-          <div class="module-bottom"><small>公司 340 + ETF 4864 = 5204 个版本</small><div class="module-actions"><a class="module-action" href="research-history.html">打开版本中心<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>公司 352 + ETF 4934 = 5286 个版本</small><div class="module-actions"><a class="module-action" href="research-history.html">打开版本中心<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-automation" class="module-card accent-green" data-capability="automation" data-search-item>
           <div class="module-code"><span>09</span><b>AUTOMATION</b></div>
           <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">1/3 已启用</span></div>
           <h3>自动化与质量门禁</h3>
           <p>每日刷新、公告轮询、财经增量和发布前质量检查分别记录结果。</p>
-          <div class="module-bottom"><small>质量门禁 0 错误 / 2 警告</small><div class="module-actions"><a class="module-action" href="system-status.html">查看系统状态<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>质量门禁 0 错误 / 4 警告</small><div class="module-actions"><a class="module-action" href="system-status.html">查看系统状态<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-bond" class="module-card accent-teal" data-capability="bond" data-search-item>
           <div class="module-code"><span>11</span><b>BOND</b></div>
@@ -199,11 +200,11 @@
       <div class="section-head"><div><span class="section-kicker">TODAY</span><h2>今日运行状态</h2><p>失败、降级和待更新不会被汇总成一个笼统的“成功”。</p></div></div>
       <div class="two-col">
         <div class="status-list">
-          <div class="status-row"><span class="dot "></span><div><strong>A 股每日主链</strong><small>0 个错误 / 2 个警告 · 降级可用</small></div><time>2026-10-22</time></div>
+          <div class="status-row"><span class="dot "></span><div><strong>A 股每日主链</strong><small>0 个错误 / 4 个警告 · 降级可用</small></div><time>2026-10-28</time></div>
           <div class="status-row"><span class="dot green"></span><div><strong>巨潮公告更新</strong><small>新增 18 份 · 0 个关键词失败待重试</small></div><time>2026-10-20</time></div>
-          <div class="status-row"><span class="dot red"></span><div><strong>公司证据同步</strong><small>14 家公司有新证据待补入研究版本</small></div><time>持续检查</time></div>
+          <div class="status-row"><span class="dot red"></span><div><strong>公司证据同步</strong><small>16 家公司有新证据待补入研究版本</small></div><time>持续检查</time></div>
         </div>
-        <div class="panel"><h3>当前覆盖边界</h3><div class="boundary">ETF 全市场：交易所确认 1,619 只、候选目录 1,688 只；通用成分穿透管线已接入，当前真实成分覆盖 1471/1688。R2 作为独立开发中的 Beta 模块，只展示入口和产品状态。</div></div>
+        <div class="panel"><h3>当前覆盖边界</h3><div class="boundary">ETF 全市场：交易所确认 1,620 只、候选目录 1,689 只；通用成分穿透管线已接入，当前真实成分覆盖 1471/1689。R2 作为独立开发中的 Beta 模块，只展示入口和产品状态。</div></div>
       </div>
     </section>
 
@@ -213,25 +214,25 @@
       <a class="report-row" href="market-temperature.html">
         <span class="report-kind">每日</span>
         <span class="report-copy"><strong>A股每日市场状态</strong><small>成交额、涨跌分布、宽基、ETF资金和融资杠杆</small></span>
-        <time>2026-10-22 23:42</time>
+        <time>2026-10-29 02:05</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="a-share-report.html">
         <span class="report-kind">长期</span>
         <span class="report-copy"><strong>A股市场全面认知报告</strong><small>市场规模、结构、周期、估值和宽基框架</small></span>
-        <time>2026-10-22 23:40</time>
+        <time>2026-10-29 02:05</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="financial-risk.html">
         <span class="report-kind">排雷</span>
         <span class="report-copy"><strong>全市场财务排雷</strong><small>三表、现金流、审计意见与连续趋势</small></span>
-        <time>2026-10-22 23:43</time>
+        <time>2026-10-29 02:05</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="etf-research.html">
         <span class="report-kind">ETF</span>
         <span class="report-copy"><strong>ETF 全市场穿透研究</strong><small>公开季报、持有公司、业务分类与季度变化</small></span>
-        <time>2026-10-22 23:43</time>
+        <time>2026-10-29 02:05</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="bond-research.html">
@@ -284,7 +285,7 @@
       </a></div>
     </section>
 
-    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-10-22 23:43:44</footer>
+    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-10-29 02:05:40</footer>
   </main>
 </div>
 <script>
