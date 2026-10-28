@@ -1,24 +1,24 @@
 {
   "schema": "a-share-public-status.v2",
-  "run_id": "a_share_20261029T020500_75507_0b0cb43f",
+  "run_id": "a_share_20261029T022439_82493_849b5ec0",
   "state": "published_data_ready",
   "market_trade_date": "2026-10-28",
   "required_trade_date": "2026-10-28",
   "publication_freshness": {
-    "checked_at": "2026-10-29 02:11:17",
+    "checked_at": "2026-10-29 02:28:49",
     "required_trade_date": "2026-10-28",
     "sources": {
       "AkShare tool_trade_date_hist_sina": "2026-10-28",
       "东方财富交易日历": "2026-10-28"
     }
   },
-  "generated_at": "2026-10-29 02:06:06",
-  "prepared_at": "2026-10-29 02:11:17",
+  "generated_at": "2026-10-29 02:27:14",
+  "prepared_at": "2026-10-29 02:28:50",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 559,
+    "checks": 563,
     "errors": 0,
-    "warnings": 4
+    "warnings": 3
   },
   "report_state": "degraded",
   "degradation_reasons": [
@@ -28,8 +28,7 @@
   "publication_policy": "latest_with_disclosed_gaps",
   "data_notes": [
     "ETF历史缺口：价格40条、流量2条；缺失值保留为空。",
-    "美债专题正在独立研究与核验，本轮仅保留待发布入口，尚无已验收的美债分析结论。",
     "GDP 2026-09：东方财富1071071.2亿元，国家统计局1071071.0亿元，差额+0.2亿元；官方整数披露精度相容；小数部分及差异原因未获官方确认"
   ],
-  "quality_report_sha256": "e985c3fa41c70d5ae57164056ac91240b94c69fad2a9e6c363e6aeed307318f1"
+  "quality_report_sha256": "4236dfdf81edcd58d3ada90f8187c9c206decf0062e484a17ffe5d94a4942207"
 }
