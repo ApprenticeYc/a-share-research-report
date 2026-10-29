@@ -88,7 +88,7 @@
     @media(max-width:1040px) { .module-grid { grid-template-columns:repeat(2,1fr); } .header-tools { align-items:flex-end; flex-direction:column; } .summary { grid-template-columns:repeat(3,1fr); } }
     @media(max-width:760px) { .shell { display:block; } aside { position:static; height:auto; padding:16px; } .brand-lockup { padding-bottom:13px; } .nav-label { display:none; } nav { display:flex; gap:6px; margin-top:10px; overflow:auto; } nav a { flex:0 0 auto; padding:6px 8px; background:rgba(255,255,255,.05); } nav a::after,.side-note { display:none; } main { padding:20px 13px 48px; } header { align-items:flex-start; flex-direction:column; } .header-tools,.search { width:100%; } .system-pill { text-align:left; } .summary,.module-grid,.two-col { grid-template-columns:1fr; } .summary div { border-right:0; border-bottom:1px solid var(--line); } .section-head { align-items:flex-start; flex-direction:column; } .report-row { grid-template-columns:44px minmax(0,1fr) 18px; } .report-row time { grid-column:2; } .arrow { grid-column:3; grid-row:1 / span 2; } }
   </style>
-<meta name="publication-policy" content="latest_with_disclosed_gaps">
+<meta name="publication-policy" content="strict">
 </head>
 <body><!-- A_SHARE_PUBLICATION_NOTES:START --><aside role="status" style="margin:18px;padding:18px;border:2px solid #b7791f;background:#fff8e6;color:#644000"><strong>数据更新与问题备注 · 2026-10-28</strong><ul><li>ETF历史缺口：价格40条、流量2条；缺失值保留为空。</li><li>GDP 2026-09：东方财富1071071.2亿元，国家统计局1071071.0亿元，差额+0.2亿元；官方整数披露精度相容；小数部分及差异原因未获官方确认</li></ul><p>行情日期与各模块数据日期分别展示；未完整数据不用于当日结论。</p></aside><!-- A_SHARE_PUBLICATION_NOTES:END -->
 <div class="shell">
@@ -103,15 +103,15 @@
   <main>
     <header>
       <div><div class="eyebrow">RESEARCH OPERATING SYSTEM</div><h1>量化研究工作台</h1><p>从全市场扫描进入公司与 ETF 深研，证据、结论和每次变化都可回溯。</p></div>
-      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 17 项待处理</span><time>更新 2026-10-29 02:26:39</time></div></div>
+      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 18 项待处理</span><time>更新 2026-10-29 04:30:23</time></div></div>
     </header>
 
     <div class="summary" aria-label="研究数据摘要">
       <div><strong>2026-10-28</strong><span>A 股最新交易日</span></div>
       <div><strong>5,576</strong><span>全 A 市场样本</span></div>
       <div><strong>2026-06-30</strong><span>财务排雷报告期</span></div>
-      <div><strong>5427</strong><span>公司与 ETF 研究版本</span></div>
-      <div><strong>17</strong><span>当前明确待处理项</span></div>
+      <div><strong>5429</strong><span>公司与 ETF 研究版本</span></div>
+      <div><strong>18</strong><span>当前明确待处理项</span></div>
     </div>
 
     <section id="overview">
@@ -171,14 +171,14 @@
           <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">可回溯</span></div>
           <h3>研究版本与回溯</h3>
           <p>公司和 ETF 按内容生成不可变版本，保留父子关系与证据时间线。</p>
-          <div class="module-bottom"><small>公司 376 + ETF 5051 = 5427 个版本</small><div class="module-actions"><a class="module-action" href="research-history.html">打开版本中心<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>公司 376 + ETF 5053 = 5429 个版本</small><div class="module-actions"><a class="module-action" href="research-history.html">打开版本中心<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-automation" class="module-card accent-green" data-capability="automation" data-search-item>
           <div class="module-code"><span>09</span><b>AUTOMATION</b></div>
           <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">1/3 已启用</span></div>
           <h3>自动化与质量门禁</h3>
           <p>每日刷新、公告轮询、财经增量和发布前质量检查分别记录结果。</p>
-          <div class="module-bottom"><small>质量门禁 0 错误 / 3 警告</small><div class="module-actions"><a class="module-action" href="system-status.html">查看系统状态<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>质量门禁 0 错误 / 4 警告</small><div class="module-actions"><a class="module-action" href="system-status.html">查看系统状态<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-bond" class="module-card accent-teal" data-capability="bond" data-search-item>
           <div class="module-code"><span>11</span><b>BOND</b></div>
@@ -200,7 +200,7 @@
       <div class="section-head"><div><span class="section-kicker">TODAY</span><h2>今日运行状态</h2><p>失败、降级和待更新不会被汇总成一个笼统的“成功”。</p></div></div>
       <div class="two-col">
         <div class="status-list">
-          <div class="status-row"><span class="dot "></span><div><strong>A 股每日主链</strong><small>0 个错误 / 3 个警告 · 降级可用</small></div><time>2026-10-28</time></div>
+          <div class="status-row"><span class="dot "></span><div><strong>A 股每日主链</strong><small>0 个错误 / 4 个警告 · 降级可用</small></div><time>2026-10-28</time></div>
           <div class="status-row"><span class="dot green"></span><div><strong>巨潮公告更新</strong><small>新增 18 份 · 0 个关键词失败待重试</small></div><time>2026-10-20</time></div>
           <div class="status-row"><span class="dot red"></span><div><strong>公司证据同步</strong><small>14 家公司有新证据待补入研究版本</small></div><time>持续检查</time></div>
         </div>
@@ -214,25 +214,25 @@
       <a class="report-row" href="market-temperature.html">
         <span class="report-kind">每日</span>
         <span class="report-copy"><strong>A股每日市场状态</strong><small>成交额、涨跌分布、宽基、ETF资金和融资杠杆</small></span>
-        <time>2026-10-29 02:26</time>
+        <time>2026-10-29 03:07</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="a-share-report.html">
         <span class="report-kind">长期</span>
         <span class="report-copy"><strong>A股市场全面认知报告</strong><small>市场规模、结构、周期、估值和宽基框架</small></span>
-        <time>2026-10-29 02:26</time>
+        <time>2026-10-29 03:07</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="financial-risk.html">
         <span class="report-kind">排雷</span>
         <span class="report-copy"><strong>全市场财务排雷</strong><small>三表、现金流、审计意见与连续趋势</small></span>
-        <time>2026-10-29 02:26</time>
+        <time>2026-10-29 04:30</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="etf-research.html">
         <span class="report-kind">ETF</span>
         <span class="report-copy"><strong>ETF 全市场穿透研究</strong><small>公开季报、持有公司、业务分类与季度变化</small></span>
-        <time>2026-10-29 02:26</time>
+        <time>2026-10-29 04:30</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="bond-research.html">
@@ -244,7 +244,7 @@
       <a class="report-row" href="companies/600900-yangtze-power/index.html">
         <span class="report-kind">公司</span>
         <span class="report-copy"><strong>长江电力综合研究</strong><small>业务、财务、现金流、估值与关键风险</small></span>
-        <time>2026-10-22 23:43</time>
+        <time>2026-10-29 02:35</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="companies/09888-baidu/index.html">
@@ -268,13 +268,13 @@
       <a class="report-row" href="companies/02015-li-auto/index.html">
         <span class="report-kind">公司</span>
         <span class="report-copy"><strong>理想汽车综合研究</strong><small>五季度财务、交付与车型、现金流、估值与关键风险</small></span>
-        <time>2026-10-22 23:43</time>
+        <time>2026-10-29 02:35</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="companies/09868-xpeng/index.html">
         <span class="report-kind">公司</span>
         <span class="report-copy"><strong>小鹏汽车综合研究</strong><small>五季度财务、交付与车型、现金流、估值与关键风险</small></span>
-        <time>2026-10-22 23:43</time>
+        <time>2026-10-29 02:35</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="lynch-methodology.html">
@@ -285,7 +285,7 @@
       </a></div>
     </section>
 
-    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-10-29 02:26:39</footer>
+    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-10-29 04:30:23</footer>
   </main>
 </div>
 <script>
