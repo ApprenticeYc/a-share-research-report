@@ -1,34 +1,35 @@
 {
   "schema": "a-share-public-status.v2",
-  "run_id": "a_share_20261029T023529_84214_71e8c646",
+  "run_id": "a_share_20261030T003216_86186_ef6b1f3c",
   "state": "published_data_ready",
-  "market_trade_date": "2026-10-28",
-  "required_trade_date": "2026-10-28",
+  "market_trade_date": "2026-10-29",
+  "required_trade_date": "2026-10-29",
   "publication_freshness": {
-    "checked_at": "2026-10-29 15:47:47",
-    "required_trade_date": "2026-10-28",
+    "checked_at": "2026-10-30 01:34:55",
+    "required_trade_date": "2026-10-29",
     "sources": {
-      "AkShare tool_trade_date_hist_sina": "2026-10-28",
-      "东方财富交易日历": "2026-10-28"
+      "AkShare tool_trade_date_hist_sina": "2026-10-29",
+      "东方财富交易日历": "2026-10-29"
     }
   },
-  "generated_at": "2026-10-29 04:37:36",
-  "prepared_at": "2026-10-29 15:47:48",
+  "generated_at": "2026-10-30 01:33:03",
+  "prepared_at": "2026-10-30 01:34:56",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 564,
+    "checks": 595,
     "errors": 0,
     "warnings": 3
   },
   "report_state": "degraded",
   "degradation_reasons": [
     "宽基ETF净申购估算包含缓存或历史回填不完整",
+    "AkShare行情或交易所成交额增量获取失败，完整行情截止20261029",
     "数据质量门禁通过，但仍有警告项，具体原因见质量检查明细"
   ],
-  "publication_policy": "strict",
+  "publication_policy": "latest_with_disclosed_gaps",
   "data_notes": [
     "ETF历史缺口：价格40条、流量2条；缺失值保留为空。",
     "GDP 2026-09：东方财富1071071.2亿元，国家统计局1071071.0亿元，差额+0.2亿元；官方整数披露精度相容；小数部分及差异原因未获官方确认"
   ],
-  "quality_report_sha256": "ecee4b8e91ce1321d1df8f8f13b7faccd0fc16859dd4573da3c11b2f409e2206"
+  "quality_report_sha256": "d83d5ce60d807a45ac2d69a6b1d85616490b98ca4546d5e8c910ae38b1099e0a"
 }
