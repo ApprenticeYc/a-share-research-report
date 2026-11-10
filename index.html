@@ -13,7 +13,7 @@
     body { margin:0; color:var(--ink); background:var(--canvas); font:13px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
     a { color:inherit; }
     .shell { display:grid; grid-template-columns:238px minmax(0,1fr); min-height:100vh; }
-    aside { position:sticky; top:0; z-index:4; height:100vh; padding:25px 18px; background:var(--nav); color:#f2f7f5; }
+    .shell > aside { position:sticky; top:0; z-index:4; height:100vh; padding:25px 18px; background:var(--nav); color:#f2f7f5; }
     .brand-lockup { display:flex; align-items:center; gap:11px; padding:0 5px 22px; border-bottom:1px solid rgba(255,255,255,.1); }
     .brand-mark { display:grid; place-items:center; width:34px; height:34px; border:1px solid rgba(255,255,255,.34); border-radius:9px; color:#a8e1d3; font-size:12px; font-weight:800; letter-spacing:.08em; }
     .brand { font-size:15px; font-weight:730; }
@@ -86,7 +86,7 @@
     [hidden] { display:none !important; }
     @media(max-width:1380px) { .module-grid { grid-template-columns:repeat(3,1fr); } }
     @media(max-width:1040px) { .module-grid { grid-template-columns:repeat(2,1fr); } .header-tools { align-items:flex-end; flex-direction:column; } .summary { grid-template-columns:repeat(3,1fr); } }
-    @media(max-width:760px) { .shell { display:block; } aside { position:static; height:auto; padding:16px; } .brand-lockup { padding-bottom:13px; } .nav-label { display:none; } nav { display:flex; gap:6px; margin-top:10px; overflow:auto; } nav a { flex:0 0 auto; padding:6px 8px; background:rgba(255,255,255,.05); } nav a::after,.side-note { display:none; } main { padding:20px 13px 48px; } header { align-items:flex-start; flex-direction:column; } .header-tools,.search { width:100%; } .system-pill { text-align:left; } .summary,.module-grid,.two-col { grid-template-columns:1fr; } .summary div { border-right:0; border-bottom:1px solid var(--line); } .section-head { align-items:flex-start; flex-direction:column; } .report-row { grid-template-columns:44px minmax(0,1fr) 18px; } .report-row time { grid-column:2; } .arrow { grid-column:3; grid-row:1 / span 2; } }
+    @media(max-width:760px) { .shell { display:block; } .shell > aside { position:static; height:auto; padding:16px; } .brand-lockup { padding-bottom:13px; } .nav-label { display:none; } nav { display:flex; gap:6px; margin-top:10px; overflow:auto; } nav a { flex:0 0 auto; padding:6px 8px; background:rgba(255,255,255,.05); } nav a::after,.side-note { display:none; } main { padding:20px 13px 48px; } header { align-items:flex-start; flex-direction:column; } .header-tools,.search { width:100%; } .system-pill { text-align:left; } .summary,.module-grid,.two-col { grid-template-columns:1fr; } .summary div { border-right:0; border-bottom:1px solid var(--line); } .section-head { align-items:flex-start; flex-direction:column; } .report-row { grid-template-columns:44px minmax(0,1fr) 18px; } .report-row time { grid-column:2; } .arrow { grid-column:3; grid-row:1 / span 2; } }
   </style>
 <meta name="publication-policy" content="latest_with_disclosed_gaps">
 </head>
@@ -103,14 +103,14 @@
   <main>
     <header>
       <div><div class="eyebrow">RESEARCH OPERATING SYSTEM</div><h1>量化研究工作台</h1><p>从全市场扫描进入公司与 ETF 深研，证据、结论和每次变化都可回溯。</p></div>
-      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 17 项待处理</span><time>更新 2026-11-11 00:31:01</time></div></div>
+      <div class="header-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索功能或公开研究" aria-label="搜索功能或公开研究"></label><div class="system-pill"><span class="badge warning">可用 · 17 项待处理</span><time>更新 2026-11-11 01:14:28</time></div></div>
     </header>
 
     <div class="summary" aria-label="研究数据摘要">
       <div><strong>2026-11-10</strong><span>A 股最新交易日</span></div>
       <div><strong>5,580</strong><span>全 A 市场样本</span></div>
       <div><strong>2026-09-30</strong><span>财务排雷报告期</span></div>
-      <div><strong>5505</strong><span>公司与 ETF 研究版本</span></div>
+      <div><strong>5514</strong><span>公司与 ETF 研究版本</span></div>
       <div><strong>17</strong><span>当前明确待处理项</span></div>
     </div>
 
@@ -136,7 +136,7 @@
           <div class="module-badges"><span class="badge partial">部分实现</span><span class="badge warning">18/22 已分析</span></div>
           <h3>个股综合分析</h3>
           <p>把财报、公告、业务、估值与双框架研究合并为可回溯结论。</p>
-          <div class="module-bottom"><small>377 个公司分析版本 · 当前公开 6 家</small><div class="module-actions"><a class="module-action" href="company-research.html">打开公司研究库<span aria-hidden="true">→</span></a><a class="module-action" href="watchlist.html">六只关注股票<span aria-hidden="true">→</span></a><a class="module-action" href="companies/600900-yangtze-power/index.html">长江电力<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09888-baidu/index.html">百度集团<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09618-jd/index.html">京东集团<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/pdd-holdings/index.html">拼多多<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/02015-li-auto/index.html">理想汽车<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09868-xpeng/index.html">小鹏汽车<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>384 个公司分析版本 · 当前公开 6 家</small><div class="module-actions"><a class="module-action" href="company-research.html">打开公司研究库<span aria-hidden="true">→</span></a><a class="module-action" href="watchlist.html">六只关注股票<span aria-hidden="true">→</span></a><a class="module-action" href="companies/600900-yangtze-power/index.html">长江电力<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09888-baidu/index.html">百度集团<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09618-jd/index.html">京东集团<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/pdd-holdings/index.html">拼多多<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/02015-li-auto/index.html">理想汽车<span aria-hidden="true">→</span></a><a class="module-action muted" href="companies/09868-xpeng/index.html">小鹏汽车<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-etf" class="module-card accent-violet" data-capability="etf" data-search-item>
           <div class="module-code"><span>04</span><b>ETF</b></div>
@@ -147,10 +147,10 @@
         </article>
         <article id="capability-disclosure" class="module-card accent-red" data-capability="disclosure" data-search-item>
           <div class="module-code"><span>05</span><b>DISCLOSURE</b></div>
-          <div class="module-badges"><span class="badge partial">部分实现</span><span class="badge ready">最近运行正常</span></div>
+          <div class="module-badges"><span class="badge partial">部分实现</span><span class="badge warning">已暂停</span></div>
           <h3>巨潮与披露更新</h3>
           <p>持续接入财报与公告，判断新证据是否改变公司盈利、估值或风险假设。</p>
-          <div class="module-bottom"><small>最近新增 18 份 · 失败关键词 0</small><div class="module-actions"><a class="module-action" href="disclosures.html">打开公告更新<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>历史轮询至 2026-10-20 · 失败关键词 0</small><div class="module-actions"><a class="module-action" href="disclosures.html">打开公告更新<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-macro" class="module-card accent-slate" data-capability="macro" data-search-item>
           <div class="module-code"><span>06</span><b>MACRO</b></div>
@@ -171,11 +171,11 @@
           <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">可回溯</span></div>
           <h3>研究版本与回溯</h3>
           <p>公司和 ETF 按内容生成不可变版本，保留父子关系与证据时间线。</p>
-          <div class="module-bottom"><small>公司 377 + ETF 5128 = 5505 个版本</small><div class="module-actions"><a class="module-action" href="research-history.html">打开版本中心<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>公司 384 + ETF 5130 = 5514 个版本</small><div class="module-actions"><a class="module-action" href="research-history.html">打开版本中心<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-automation" class="module-card accent-green" data-capability="automation" data-search-item>
           <div class="module-code"><span>09</span><b>AUTOMATION</b></div>
-          <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">1/3 已启用</span></div>
+          <div class="module-badges"><span class="badge ready">已实现</span><span class="badge ready">2/4 已启用</span></div>
           <h3>自动化与质量门禁</h3>
           <p>每日刷新、公告轮询、财经增量和发布前质量检查分别记录结果。</p>
           <div class="module-bottom"><small>质量门禁 0 错误 / 3 警告</small><div class="module-actions"><a class="module-action" href="system-status.html">查看系统状态<span aria-hidden="true">→</span></a></div></div>
@@ -185,7 +185,7 @@
           <div class="module-badges"><span class="badge partial">部分覆盖</span><span class="badge snapshot">公开研究快照</span></div>
           <h3>债基与偏债混合研究</h3>
           <p>五期限收益与回撤、报告底层资产、费用及独立核验；纯债与偏债混合分别比较。</p>
-          <div class="module-bottom"><small>数据与报告日期分列 · 证据不足保留待核</small><div class="module-actions"><a class="module-action" href="bond-research.html">打开债基研究<span aria-hidden="true">→</span></a></div></div>
+          <div class="module-bottom"><small>研究运行截止 2026-11-01 · 证据不足保留待核</small><div class="module-actions"><a class="module-action" href="bond-research.html">打开债基研究<span aria-hidden="true">→</span></a></div></div>
         </article>
         <article id="capability-r2" class="module-card accent-violet" data-capability="r2" data-search-item>
           <div class="module-code"><span>10</span><b>R2</b></div>
@@ -197,14 +197,16 @@
     </section>
 
     <section id="today">
-      <div class="section-head"><div><span class="section-kicker">TODAY</span><h2>今日运行状态</h2><p>失败、降级和待更新不会被汇总成一个笼统的“成功”。</p></div></div>
+      <div class="section-head"><div><span class="section-kicker">STATUS</span><h2>运行状态与维护顺序</h2><p>数据日期、历史运行与当前调度分别展示。</p></div></div>
       <div class="two-col">
         <div class="status-list">
           <div class="status-row"><span class="dot "></span><div><strong>A 股每日主链</strong><small>0 个错误 / 3 个警告 · 降级可用</small></div><time>2026-11-10</time></div>
-          <div class="status-row"><span class="dot green"></span><div><strong>巨潮公告更新</strong><small>新增 18 份 · 0 个关键词失败待重试</small></div><time>2026-10-20</time></div>
+          <div class="status-row"><span class="dot"></span><div><strong>巨潮公告 · 已暂停</strong><small>历史轮询至 2026-10-20 · 失败关键词 0</small></div><time>历史记录</time></div>
+          <div class="status-row"><span class="dot"></span><div><strong>知识星球</strong><small>用户排除联网，历史资料保留</small></div><time>2026-09-08</time></div>
+          <div class="status-row"><span class="dot"></span><div><strong>债基研究</strong><small>研究运行截止日；巡检不代表数据已更新</small></div><time>2026-11-01</time></div>
           <div class="status-row"><span class="dot red"></span><div><strong>公司证据同步</strong><small>14 家公司有新证据待补入研究版本</small></div><time>持续检查</time></div>
         </div>
-        <div class="panel"><h3>当前覆盖边界</h3><div class="boundary">ETF 全市场：交易所确认 1,625 只、候选目录 1,710 只；通用成分穿透管线已接入，当前真实成分覆盖 1471/1710。R2 作为独立开发中的 Beta 模块，只展示入口和产品状态。</div></div>
+        <div class="panel"><h3>接下来的维护顺序</h3><div class="boundary">1. 完成债基研究收尾与核验<br>2. 更新公司财务与多来源证据<br>3. 推进 ETF 成分换季<br>4. 宏观数据按实际披露更新</div><h3>当前覆盖边界</h3><div class="boundary">ETF 全市场：交易所确认 1,625 只、候选目录 1,710 只；当前真实成分覆盖 1471/1710。R2 作为独立开发中的 Beta 模块，只展示入口和产品状态。</div></div>
       </div>
     </section>
 
@@ -214,25 +216,25 @@
       <a class="report-row" href="market-temperature.html">
         <span class="report-kind">每日</span>
         <span class="report-copy"><strong>A股每日市场状态</strong><small>成交额、涨跌分布、宽基、ETF资金和融资杠杆</small></span>
-        <time>2026-11-11 00:30</time>
+        <time>2026-11-11 01:14</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="a-share-report.html">
         <span class="report-kind">长期</span>
         <span class="report-copy"><strong>A股市场全面认知报告</strong><small>市场规模、结构、周期、估值和宽基框架</small></span>
-        <time>2026-11-11 00:30</time>
+        <time>2026-11-11 01:14</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="financial-risk.html">
         <span class="report-kind">排雷</span>
         <span class="report-copy"><strong>全市场财务排雷</strong><small>三表、现金流、审计意见与连续趋势</small></span>
-        <time>2026-11-11 00:31</time>
+        <time>2026-11-11 01:14</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="etf-research.html">
         <span class="report-kind">ETF</span>
         <span class="report-copy"><strong>ETF 全市场穿透研究</strong><small>公开季报、持有公司、业务分类与季度变化</small></span>
-        <time>2026-11-11 00:31</time>
+        <time>2026-11-11 01:14</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="bond-research.html">
@@ -250,7 +252,7 @@
       <a class="report-row" href="companies/09888-baidu/index.html">
         <span class="report-kind">公司</span>
         <span class="report-copy"><strong>百度集团综合研究</strong><small>五季度财务、AI 业务、现金流、估值与关键风险</small></span>
-        <time>2026-11-11 00:31</time>
+        <time>2026-11-11 01:14</time>
         <span class="arrow" aria-hidden="true">&#8594;</span>
       </a>
       <a class="report-row" href="companies/09618-jd/index.html">
@@ -285,7 +287,7 @@
       </a></div>
     </section>
 
-    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-11-11 00:31:01</footer>
+    <footer>公开研究工作台 · 敏感字段已脱敏 · 页面生成于 2026-11-11 01:14:28</footer>
   </main>
 </div>
 <script>
