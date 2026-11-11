@@ -1,34 +1,35 @@
 {
   "schema": "a-share-public-status.v2",
-  "run_id": "a_share_20261111T105023_51207_39f1c05b",
+  "run_id": "a_share_20261111T201623_62141_1845a040",
   "state": "published_data_ready",
-  "market_trade_date": "2026-11-10",
-  "required_trade_date": "2026-11-10",
+  "market_trade_date": "2026-11-11",
+  "required_trade_date": "2026-11-11",
   "publication_freshness": {
-    "checked_at": "2026-11-11 11:03:21",
-    "required_trade_date": "2026-11-10",
+    "checked_at": "2026-11-11 20:23:57",
+    "required_trade_date": "2026-11-11",
     "sources": {
-      "AkShare tool_trade_date_hist_sina": "2026-11-10",
-      "东方财富交易日历": "2026-11-10"
+      "AkShare tool_trade_date_hist_sina": "2026-11-11",
+      "东方财富交易日历": "2026-11-11"
     }
   },
-  "generated_at": "2026-11-11 10:53:27",
-  "prepared_at": "2026-11-11 11:03:21",
+  "generated_at": "2026-11-11 20:17:35",
+  "prepared_at": "2026-11-11 20:23:57",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 669,
+    "checks": 700,
     "errors": 0,
-    "warnings": 3
+    "warnings": 5
   },
   "report_state": "degraded",
   "degradation_reasons": [
     "宽基ETF净申购估算包含缓存或历史回填不完整",
     "数据质量门禁通过，但仍有警告项，具体原因见质量检查明细"
   ],
-  "publication_policy": "strict",
+  "publication_policy": "latest_with_disclosed_gaps",
   "data_notes": [
-    "ETF历史缺口：价格40条、流量2条；缺失值保留为空。",
+    "ETF 2026-11-11 尚不完整：应纳入285只、价格285只、相邻份额就绪110只、可计算110只。最新完整流量日2026-11-10；当日全样本净申购估算暂不展示。其中沪市175只目标日份额未观测。上交所接口响应字段结构异常，本次未能取得；这不代表交易所未披露。",
+    "ETF截至2026-11-11累计缺口（包含当日）：价格40条、流量177条；缺失值保留为空。",
     "GDP 2026-09：东方财富1071071.2亿元，国家统计局1071071.0亿元，差额+0.2亿元；官方整数披露精度相容；小数部分及差异原因未获官方确认"
   ],
-  "quality_report_sha256": "81061f4bef81589c7756c363a86c4a96163a5598c605b4de35656345a6e2dbd7"
+  "quality_report_sha256": "64d61a8a25fe814d63a2550c672d523d980a0882e1d6a6661dccc6adb2c3a593"
 }
