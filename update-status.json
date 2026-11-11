@@ -1,22 +1,22 @@
 {
   "schema": "a-share-public-status.v2",
-  "run_id": "a_share_20261111T020214_30781_f65b0d7d",
+  "run_id": "a_share_20261111T105023_51207_39f1c05b",
   "state": "published_data_ready",
   "market_trade_date": "2026-11-10",
   "required_trade_date": "2026-11-10",
   "publication_freshness": {
-    "checked_at": "2026-11-11 02:07:31",
+    "checked_at": "2026-11-11 11:03:21",
     "required_trade_date": "2026-11-10",
     "sources": {
       "AkShare tool_trade_date_hist_sina": "2026-11-10",
       "东方财富交易日历": "2026-11-10"
     }
   },
-  "generated_at": "2026-11-11 02:03:17",
-  "prepared_at": "2026-11-11 02:07:31",
+  "generated_at": "2026-11-11 10:53:27",
+  "prepared_at": "2026-11-11 11:03:21",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 659,
+    "checks": 669,
     "errors": 0,
     "warnings": 3
   },
@@ -30,5 +30,5 @@
     "ETF历史缺口：价格40条、流量2条；缺失值保留为空。",
     "GDP 2026-09：东方财富1071071.2亿元，国家统计局1071071.0亿元，差额+0.2亿元；官方整数披露精度相容；小数部分及差异原因未获官方确认"
   ],
-  "quality_report_sha256": "dc31e1d44eddb4bc6ee7c7ca3b19b99ffef4f1995c730e136619ececa5487353"
+  "quality_report_sha256": "81061f4bef81589c7756c363a86c4a96163a5598c605b4de35656345a6e2dbd7"
 }
