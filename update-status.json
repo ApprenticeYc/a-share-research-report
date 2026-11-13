@@ -1,24 +1,24 @@
 {
   "schema": "a-share-public-status.v2",
-  "run_id": "a_share_20261111T201623_62141_1845a040",
+  "run_id": "a_share_20261113T013233_72308_9197c0d6",
   "state": "published_data_ready",
-  "market_trade_date": "2026-11-11",
-  "required_trade_date": "2026-11-11",
+  "market_trade_date": "2026-11-12",
+  "required_trade_date": "2026-11-12",
   "publication_freshness": {
-    "checked_at": "2026-11-11 20:23:57",
-    "required_trade_date": "2026-11-11",
+    "checked_at": "2026-11-13 12:42:43",
+    "required_trade_date": "2026-11-12",
     "sources": {
-      "AkShare tool_trade_date_hist_sina": "2026-11-11",
-      "东方财富交易日历": "2026-11-11"
+      "AkShare tool_trade_date_hist_sina": "2026-11-12",
+      "东方财富交易日历": "2026-11-12"
     }
   },
-  "generated_at": "2026-11-11 20:17:35",
-  "prepared_at": "2026-11-11 20:23:57",
+  "generated_at": "2026-11-13 02:39:01",
+  "prepared_at": "2026-11-13 12:42:43",
   "data_quality": "passed_with_warnings",
   "quality_summary": {
-    "checks": 700,
+    "checks": 730,
     "errors": 0,
-    "warnings": 5
+    "warnings": 3
   },
   "report_state": "degraded",
   "degradation_reasons": [
@@ -27,9 +27,8 @@
   ],
   "publication_policy": "latest_with_disclosed_gaps",
   "data_notes": [
-    "ETF 2026-11-11 尚不完整：应纳入285只、价格285只、相邻份额就绪110只、可计算110只。最新完整流量日2026-11-10；当日全样本净申购估算暂不展示。其中沪市175只目标日份额未观测。上交所接口响应字段结构异常，本次未能取得；这不代表交易所未披露。",
-    "ETF截至2026-11-11累计缺口（包含当日）：价格40条、流量177条；缺失值保留为空。",
+    "ETF截至2026-11-12累计缺口（包含当日）：价格40条、流量2条；缺失值保留为空。",
     "GDP 2026-09：东方财富1071071.2亿元，国家统计局1071071.0亿元，差额+0.2亿元；官方整数披露精度相容；小数部分及差异原因未获官方确认"
   ],
-  "quality_report_sha256": "64d61a8a25fe814d63a2550c672d523d980a0882e1d6a6661dccc6adb2c3a593"
+  "quality_report_sha256": "9b508849ef04362809ce3c486d52f93d4d12481a9ed6939577cf6644a5a9c805"
 }
